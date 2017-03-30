@@ -244,7 +244,11 @@ PRODUCT_PACKAGES += \
     ueventd.sony.rc \
     init.sony-device-common.rc \
     init.sony-platform.rc \
-    init.sony.rc
+    init.sony.rc \
+    init.insmod.sh \
+    init.insmod.cfg \
+    init.qcom.devstart.sh \
+    init.qcom.ipastart.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \

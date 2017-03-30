@@ -53,6 +53,10 @@
 
 # Shell scripts
 /(vendor|system/vendor|odm|vendor/odm)/bin/init\.qcom\.msim\.sh        u:object_r:init-qcom-msim-sh_exec:s0
+/vendor/bin/init\.qcom\.devstart\.sh                                 u:object_r:init-qcom-devstart-sh_exec:s0
+/vendor/bin/init\.qcom\.ipastart\.sh                                 u:object_r:init-qcom-ipastart-sh_exec:s0
+/vendor/bin/init\.insmod\.sh                                         u:object_r:init-insmod-sh_exec:s0
+/vendor/etc/init\.insmod\.cfg                                        u:object_r:init-insmod-sh_exec:s0
 
 # Sys files
 /sys/devices/virtual/sec/tsp(/.*)?                              u:object_r:sysfs_tsp:s0

@@ -82,3 +82,28 @@ sh_binary {
     src: "init.qcom.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.insmod.sh",
+    src: "init.insmod.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.insmod.cfg",
+    filename: "init.insmod.cfg",
+    src: "init.insmod.cfg",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.devstart.sh",
+    src: "init.qcom.devstart.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.ipastart.sh",
+    src: "init.qcom.ipastart.sh",
+    vendor: true,
+}

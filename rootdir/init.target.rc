@@ -66,6 +66,38 @@ on early-init
     export MEMTAG_OPTIONS off
 
 on init
+    # Loading kernel modules in background
+    start insmod_sh
+
+    # disable thermal hotplug for thermal
+    write /sys/module/msm_thermal/core_control/enabled 0
+    # bring back all cores
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
+    # configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "sched"
+    # configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "sched"
+
+    start power_sh
+    # enable all cores for all cpuset during boot
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-7
+    write /dev/cpuset/system-background/cpus 0-7
+
+    # set default schedTune value for foreground/top-app
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
@@ -76,6 +108,7 @@ on early-fs
     start vold
 
 on fs
+    # Start HW service manager early
     start hwservicemanager
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
@@ -94,16 +127,40 @@ on post-fs
     start  vendor.qvirtmgr
 
 on late-fs
+    # Start devices by sysfs trigger
+    start devstart_sh
+    # Start services for bootanim
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+    start hwcomposer-2-4
+    start configstore-hal-1-0
+    start gralloc-2-0
+
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
     mount_all /vendor/etc/fstab.qcom --late
 
+on property:sys.listeners.registered=true
+    # load IPA FWs
+    start ipastart_sh
+
 on post-fs-data
+    # We can start netd here before in is launched in common init.rc on zygote-start
+    start netd
+    # Start qseecomd once we have /data/
+    start qseecomd
+
     mkdir /vendor/data/tombstones 0771 system system
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
 
 on early-boot
+    # wait for devices
+    wait_for_prop sys.qcom.devup 1
+    # wait for insmod_sh to finish all modules
+    wait_for_prop sys.all.modules.ready 1
+
     start vendor.sensors
 
 on boot
@@ -202,5 +259,26 @@ service fan_control_turn_on /vendor/bin/fan_service 1
 service fan_control_turn_off /vendor/bin/fan_service 0
     class late_start
     user root
+    disabled
+    oneshot
+
+service devstart_sh /vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service ipastart_sh /vendor/bin/init.qcom.ipastart.sh
+    class main
+    user system
+    group net_admin
+    disabled
+    oneshot
+
+service insmod_sh /vendor/bin/init.insmod.sh
+    class main
+    user root
+    group root system
     disabled
     oneshot
