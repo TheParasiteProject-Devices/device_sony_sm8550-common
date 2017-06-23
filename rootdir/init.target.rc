@@ -205,3 +205,7 @@ service lahaina-post-boot /vendor/bin/init.lahaina.post_boot.sh
 
 on property:vendor.post_boot.parsed=1
     start lahaina-post-boot
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
