@@ -243,7 +243,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
 BOOT_SECURITY_PATCH := 2024-03-01
-VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
