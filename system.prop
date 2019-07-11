@@ -58,9 +58,6 @@ persist.sys.fflag.override.settings_network_and_internet_v2=true
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ril.subscription.types=NV,RUIM
 
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
