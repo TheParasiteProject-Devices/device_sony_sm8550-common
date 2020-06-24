@@ -248,6 +248,9 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+# Incremental FS
+ro.incremental.enable=true
+
 # Keystore
 ro.hardware.keystore_desede=true
 
