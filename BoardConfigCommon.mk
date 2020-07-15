@@ -219,6 +219,9 @@ DEVICE_MANIFEST_FILE := \
 $(call soong_config_set,sony_touch,board,yodo)
 $(call soong_config_set,sony_touch,touch_ctrl_path,/sys/devices/virtual/input/lxs_ts_input)
 
+# Allow LZ4 compression
+BOARD_RAMDISK_USE_LZ4 := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
