@@ -187,6 +187,9 @@ DEVICE_MANIFEST_FILE := \
 # Lineage Touch HAL
 $(call soong_config_set,sony_touch,panel,lxs_ts)
 
+# Allow LZ4 compression
+BOARD_RAMDISK_USE_LZ4 := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
