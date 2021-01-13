@@ -355,6 +355,13 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
 ril.subscription.types=NV,RUIM \
 ro.com.android.dataroaming?=true
 
+# Radio (IMS)
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableQXDMLogs=1
+
 # RIL
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ril.subscription.types=NV,RUIM
