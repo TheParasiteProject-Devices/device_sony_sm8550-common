@@ -180,6 +180,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 ro.crypto.dm_default_key.options_format.version=2 \
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Disable MTE Async for system server
+PRODUCT_SYSTEM_PROPERTIES += \
+arm64.memtag.process.system_server=off
+
 # Display
 PRODUCT_ODM_PROPERTIES += \
 persist.vendor.display.pcc_matrix=0.000000,0.000000,0.000000,0.000000,0.117647,0.235294 \
