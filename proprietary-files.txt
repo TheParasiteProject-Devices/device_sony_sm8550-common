@@ -529,6 +529,12 @@ vendor/lib64/libree_bix_agent.so
 vendor/firmware/egisap.mbn
 
 # GNSS
+system_ext/etc/permissions/com.qti.location.sdk.xml
+system_ext/etc/permissions/com.qualcomm.location.xml
+system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
+system_ext/framework/com.qti.location.sdk.jar
+system_ext/lib64/liblocsdk_diag_jni.so
+system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
