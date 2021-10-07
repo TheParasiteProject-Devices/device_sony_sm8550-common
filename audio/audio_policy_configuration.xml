@@ -92,7 +92,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <item>Built-In Mic Bottom</item>
                 <item>Built-In Mic Top</item>
                 <item>Built-In Back Mic</item>
-                <item>FM Tuner</item>
                 <item>Telephony Rx</item>
                 <item>Echo Reference</item>
             </attachedDevices>
@@ -426,11 +425,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </devicePort>
-                <devicePort tagName="FM Tuner" type="AUDIO_DEVICE_IN_FM_TUNER" role="source">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
-                </devicePort>
                 <devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
@@ -502,7 +496,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <route type="mix" sink="voice_rx"
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic Bottom,Built-In Mic Top,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx,A2DP In,Echo Reference,BLE In"/>
+                       sources="Built-In Mic Bottom,Built-In Mic Top,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,Telephony Rx,A2DP In,Echo Reference,BLE In"/>
                 <!--
                 <route type="mix" sink="compress-input"
                        sources="Built-In Mic Bottom,Built-In Mic Top,Built-In Back Mic,BT SCO Headset Mic,Wired Headset Mic,USB Device In,USB Headset In,BLE In"/>
