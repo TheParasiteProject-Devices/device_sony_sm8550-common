@@ -264,6 +264,7 @@ debug.sf.earlyGl.sf.duration=15666666 \
 debug.sf.enable_advanced_sf_phase_offset=1 \
 debug.sf.enable_gl_backpressure=1 \
 debug.sf.enable_hwc_vds=0 \
+debug.sf.frame_rate_multiple_threshold=120 \
 debug.sf.predict_hwc_composition_strategy=0 \
 debug.sf.latch_unsignaled=1 \
 debug.sf.late.app.duration=16666666 \
