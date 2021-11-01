@@ -7,6 +7,7 @@ camera.disable_zsl_mode=true
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
+debug.sf.frame_rate_multiple_threshold=120
 
 # CNE
 persist.vendor.cne.feature=1
