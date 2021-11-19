@@ -309,6 +309,7 @@ media.stagefright.enable-scan=true \
 media.stagefright.thumbnail.prefer_hw_codecs=true \
 mmp.enable.3g2=true \
 media.aac_51_output_enabled=true \
+persist.mm.enable.prefetch=true \
 vendor.mm.enable.qcom_parser=16777215 \
 ro.mediacodec.min_sample_rate=7350 \
 ro.mediacodec.max_sample_rate=2822400 \
