@@ -285,6 +285,11 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true \
 ro.surface_flinger.use_color_management=true \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# HWUI
+PRODUCT_VENDOR_PROPERTIES += \
+debug.hwui.use_hint_manager=true \
+debug.hwui.target_cpu_time_percent=30
+
 # IMS
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.dbg.volte_avail_ovr=1 \
