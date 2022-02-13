@@ -416,6 +416,12 @@ ro.semc.version.sw_variant=GLOBAL-C2
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Suspend properties
+PRODUCT_VENDOR_PROPERTIES += \
+suspend.short_suspend_threshold_millis=2000 \
+suspend.short_suspend_backoff_enabled=true \
+suspend.max_sleep_time_millis=40000
+
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.usb.controller=a600000.dwc3 \
