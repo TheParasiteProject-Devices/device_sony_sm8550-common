@@ -55,4 +55,12 @@
     <string name="quick_settings_tiles_default" translatable="false">
         wifi,cell,location,bt,flashlight,airplane,nfc,hotspot,battery,screenrecord,mictoggle,cameratoggle
     </string>
+
+    <!-- Icons that don't show in a collapsed non-keyguard statusbar -->
+    <string-array name="config_collapsed_statusbar_icon_blocklist" translatable="false">
+    </string-array>
+
+    <!-- Icons that don't show in a collapsed statusbar on keyguard -->
+    <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
+    </string-array>
 </resources>
