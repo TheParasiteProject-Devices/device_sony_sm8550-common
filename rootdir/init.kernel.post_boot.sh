@@ -36,6 +36,7 @@ if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
 fi
 
 function configure_zram_parameters() {
+    return
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
 
@@ -112,6 +113,7 @@ function configure_read_ahead_kb_values() {
 }
 
 function configure_memory_parameters() {
+	return
 	# Set Memory parameters.
 	#
 	# Set per_process_reclaim tuning parameters
