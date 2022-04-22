@@ -21,3 +21,6 @@ persist.bluetooth.leaudio_offload.disabled=false
 persist.bluetooth.bqr.event_mask=295006
 persist.bluetooth.bqr.vnd_quality_mask=16
 persist.bluetooth.bqr.vnd_trace_mask=0
+
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
