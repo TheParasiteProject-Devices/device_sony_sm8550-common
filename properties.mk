@@ -346,6 +346,10 @@ debug.stagefright.omx_default_rank=0
 PRODUCT_VENDOR_PROPERTIES += \
 ro.camera.notify_nfc=1
 
+# Phantom process monitoring
+PRODUCT_PRODUCT_PROPERTIES += \
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.extension_library=libqti-perfd-client.so
