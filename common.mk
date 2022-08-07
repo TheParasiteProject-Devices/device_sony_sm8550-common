@@ -249,9 +249,7 @@ $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sdm
-
-$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
+    vendor.lineage.livedisplay@2.1-service.sony
 
 # Media
 PRODUCT_COPY_FILES += \
