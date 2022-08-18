@@ -210,6 +210,7 @@ vendor.display.hmd_mode=0
 
 PRODUCT_SYSTEM_PROPERTIES += \
 debug.sf.enable_hwc_vds=1 \
+debug.sf.enable_transaction_tracing=false \
 debug.sf.auto_latch_unsignaled=1
 
 PRODUCT_VENDOR_PROPERTIES += \
