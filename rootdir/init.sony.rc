@@ -9,6 +9,9 @@ service msim_sh /odm/bin/init.qcom.msim.sh
     group root
     oneshot
 
+on init
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+
 on boot
     # Enable smart charging
     wait /sys/class/battchg_ext/smart_charging_activation
@@ -21,6 +24,9 @@ on boot
     # Set up permission for dt2w nodes
     chown system system /sys/devices/virtual/input/lxs_ts_input/enable_knock
     chown system system /sys/devices/dsi_panel_driver/pre_sod_mode
+
+    # Migrate tasks again in case kernel threads are created during boot
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
 on post-fs
     # radio
