@@ -107,7 +107,6 @@ blob_fixups: blob_fixups_user_type = {
         'android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'
     ),
     (
-        'vendor/etc/seccomp_policy/atfwd@2.0.policy',
         'vendor/etc/seccomp_policy/wfdhdcphalservice.policy',
     ): blob_fixup()
     .add_line_if_missing(
