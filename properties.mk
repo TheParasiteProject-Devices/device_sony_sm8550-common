@@ -1,7 +1,8 @@
 # Audio
 PRODUCT_PRODUCT_PROPERTIES += \
-ro.config.media_vol_steps=30 \
-ro.config.vc_call_vol_steps=8
+ro.config.media_vol_steps=100 \
+ro.config.media_vol_default=10 \
+ro.config.vc_call_vol_steps=11
 
 PRODUCT_SYSTEM_PROPERTIES += \
 audio.offload.min.duration.secs=30
