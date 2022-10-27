@@ -412,6 +412,9 @@ persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableIMSLogs=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
+PRODUCT_VENDOR_PROPERTIES += \
+ro.telephony.block_binder_thread_on_incoming_calls=false
+
 # RIL
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ril.subscription.types=NV,RUIM
