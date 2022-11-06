@@ -412,6 +412,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Power Stats
+PRODUCT_PACKAGES += \
+    android.hardware.power.stats
+
 # Properties
 include $(LOCAL_PATH)/properties.mk
 
