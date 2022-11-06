@@ -175,4 +175,11 @@
             <instance>oemhook1</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.power.stats</name>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
