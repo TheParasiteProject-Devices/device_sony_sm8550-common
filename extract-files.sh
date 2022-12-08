@@ -66,6 +66,9 @@ function blob_fixup() {
         vendor/bin/slim_daemon)
             ${PATCHELF} --add-needed "libc++_shared.so" "${2}"
             ;;
+        vendor/etc/msm_irqbalance.conf)
+            sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
+            ;;
     esac
 }
 
