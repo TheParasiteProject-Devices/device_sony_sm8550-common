@@ -45,7 +45,6 @@ ro.vendor.audio.sdk.ssr=false \
 vendor.audio.c2.preferred=true \
 vendor.audio.compress_capture.aac=true \
 vendor.audio.compress_capture.enabled=true \
-vendor.audio_hal.period_size=192 \
 vendor.audio.tunnel.encode=false \
 vendor.audio.offload.buffer.size.kb=256 \
 vendor.audio.offload.track.enable=true \
@@ -60,8 +59,6 @@ vendor.audio.safx.pbe.enabled=false \
 vendor.audio.parser.ip.buffer.size=262144 \
 vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio_hal.in_period_size=144 \
-vendor.audio_hal.period_multiplier=3 \
-vendor.audio.adm.buffering.ms=2 \
 vendor.audio.volume.headset.gain.depcal=true \
 vendor.audio.hal.output.suspend.supported=true \
 vendor.audio.use.sw.alac.decoder=true \
@@ -118,6 +115,22 @@ vendor.audio.enable.cirrus.speaker=true \
 vendor.voice.path.for.pcm.voip=true \
 vendor.qc2audio.suspend.enabled=true \
 vendor.qc2audio.per_frame.flac.dec.enabled=true
+
+# Audio (Misc)
+PRODUCT_VENDOR_PROPERTIES += \
+audio.safemedia.bypass=true \
+vendor.audio.usb.perio=2500 \
+vendor.audio.usb.out.period_us=2500 \
+vendor.audio.usb.out.period_count=2 \
+vendor.audio_hal.period_size=120 \
+vendor.audio_hal.period_multiplier=1 \
+vendor.audio.adm.buffering.ms=2 \
+persist.bluetooth.sbc_hd_higher_bitrate=1 \
+af.resampler.quality=7 \
+ro.audio.resampler.psd.enable_at_samplerate=44100 \
+ro.audio.resampler.psd.stopband=179 \
+ro.audio.resampler.psd.halflength=408 \
+ro.audio.resampler.psd.tbwcheat=99
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
