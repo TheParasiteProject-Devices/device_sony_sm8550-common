@@ -201,3 +201,13 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
+
+service lahaina-post-boot /vendor/bin/init.lahaina.post_boot.sh
+    class late_start
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+on property:vendor.post_boot.parsed=1
+    start lahaina-post-boot
