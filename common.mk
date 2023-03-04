@@ -265,6 +265,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.kalama.post_boot.sh \
     init.sony-device-common.rc \
     init.sony-platform.rc \
     init.sony.rc \
