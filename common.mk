@@ -241,6 +241,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     ueventd.sony.rc \
+    init.lahaina.post_boot.sh \
     init.sony-device-common.rc \
     init.sony-platform.rc \
     init.sony.rc
