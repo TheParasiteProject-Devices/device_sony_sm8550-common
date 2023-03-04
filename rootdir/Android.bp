@@ -91,6 +91,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kalama.post_boot.sh",
+    src: "init.kalama.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
     vendor: true,
