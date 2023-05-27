@@ -5,3 +5,5 @@
 
 # Custom tuning for Kalama SoC
 
+# Enable suspend to RAM
+write /sys/power/mem_sleep "deep"
