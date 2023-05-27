@@ -5,3 +5,5 @@
 
 # Custom tuning for Lahaina SoC
 
+# Enable suspend to RAM
+write /sys/power/mem_sleep "deep"
