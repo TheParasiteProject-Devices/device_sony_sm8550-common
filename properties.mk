@@ -211,6 +211,7 @@ persist.vendor.display.opec_mode=0 \
 vendor.display.hmd_mode=0
 
 PRODUCT_SYSTEM_PROPERTIES += \
+debug.hwui.renderer=skiavk \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.auto_latch_unsignaled=1
