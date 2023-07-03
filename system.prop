@@ -5,6 +5,7 @@ audio.offload.min.duration.secs=30
 camera.disable_zsl_mode=true
 
 # Display
+debug.hwui.renderer=skiavk
 debug.sf.enable_hwc_vds=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.auto_latch_unsignaled=1
