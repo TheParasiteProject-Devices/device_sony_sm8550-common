@@ -214,9 +214,6 @@ on property:sys.shutdown.requested=*
     write /sys/class/battchg_ext/bootup_shutdown_phase 4
     write /sys/class/power_supply/battery/uevent change
 
-on property:ro.build.type=user && property:ro.boot.verifiedbootstate=orange
-    setprop persist.sys.usb.config adb
-
 on property:sys.powerctl=*
     start spcdeld
 
