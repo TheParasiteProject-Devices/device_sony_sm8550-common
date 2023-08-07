@@ -5,4 +5,7 @@
 
      <!-- Pocket Lock -->
      <bool name="config_pocketModeSupported">true</bool>
+
+    <!-- Enforce DisplayModeDirector to select user preferred resolution -->
+    <bool name="config_forceToUseSelectedResolution">true</bool>
 </resources>
