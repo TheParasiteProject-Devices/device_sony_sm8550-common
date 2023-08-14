@@ -436,12 +436,12 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
 
 # Sony Display interface
-PRODUCT_PACKAGES += \
-    vendor.semc.hardware.display@2.0.vendor \
-    vendor.semc.hardware.display@2.1.vendor \
-    vendor.semc.hardware.display@2.2.vendor \
-    vendor.semc.hardware.display@2.3.vendor \
-    vendor.semc.hardware.display@2.4.vendor
+# PRODUCT_PACKAGES += \
+#     vendor.semc.hardware.display@2.0.vendor \
+#     vendor.semc.hardware.display@2.1.vendor \
+#     vendor.semc.hardware.display@2.2.vendor \
+#     vendor.semc.hardware.display@2.3.vendor \
+#     vendor.semc.hardware.display@2.4.vendor
 
 # Shim
 PRODUCT_PACKAGES += \
@@ -529,10 +529,6 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
-
-# XperiaParts
-PRODUCT_PACKAGES += \
-    XperiaParts
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
