@@ -389,7 +389,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_kalama_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kalama_vendor.xml
 
 # LiveDisplay
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.sony
 
 # Net
@@ -551,8 +551,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
 # XperiaParts
-# PRODUCT_PACKAGES += \
-#     XperiaParts
+PRODUCT_PACKAGES += \
+    XperiaParts
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
