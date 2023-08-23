@@ -217,18 +217,11 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.sf.disable_client_composition_cache=1
-debug.sf.early.app.duration=16666666
-debug.sf.early.sf.duration=15666666
-debug.sf.earlyGl.app.duration=16666666
-debug.sf.earlyGl.sf.duration=15666666
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.latch_unsignaled=1
-debug.sf.late.app.duration=16666666
-debug.sf.late.sf.duration=15666666
 debug.sf.treat_170m_as_sRGB=1
-debug.sf.use_phase_offsets_as_durations=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
