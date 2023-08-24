@@ -186,6 +186,7 @@ vendor/lib64/liblx-ar_util.so
 vendor/lib64/libmcs.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
+vendor/lib64/libsonydseehxwrapper.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
@@ -597,6 +598,7 @@ vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeHtpPrepare.so
+vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libarcsoft_bokeh_adapter.so
@@ -731,6 +733,7 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so
 vendor/lib64/vendor.somc.camera.device-impl.so
 vendor/lib64/vendor.somc.hardware.videoeffect-V1-impl.so
+vendor/lib64/vendor.somc.hardware.videoeffect-V1-ndk_platform.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -907,6 +910,8 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
 vendor/etc/clstc_config_library.xml
+vendor/etc/disp_color_conf.xml
+vendor/etc/disp_panel_conf.xml
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
@@ -916,11 +921,18 @@ vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/displayconfig/display_id_131.xml
+vendor/lib/libclstc_algorithm_adapter.so
+vendor/lib/libclstc_hdr.so
+vendor/lib64/libSonyDisplayProperties.so
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_hdr.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libintervmipc.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
@@ -1030,6 +1042,7 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-rbs.rc
 vendor/lib64/hw/bix.fingerprint.default.so
+vendor/lib64/lib_bix_idd.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/libets_teeclient_v2.so
 vendor/lib64/libree_bix_agent.so
@@ -1443,6 +1456,10 @@ vendor/lib64/nfc_nci.nqx.default.hw.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 vendor/lib64/vendor.somc.hardware.nfc@1.0.so
+vendor/lib64/libchrome.so
+vendor/lib64/jcos_nq_client.so
+vendor/lib64/ls_nq_client.so
+vendor/lib64/se_nq_extn_client.so
 
 # NFC configs
 vendor/etc/libnfc-nci.conf
@@ -1692,6 +1709,7 @@ vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
+vendor/etc/seccomp_policy/qms.policy
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/telephony_packages.xml
@@ -1785,6 +1803,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib64/vendor.somc.hardware.radio@1.0.so
+vendor/lib64/vendor.somc.hardware.aidlradio-V1-ndk.so
 
 # RIL - UIM
 product/app/uimgbaservice/uimgbaservice.apk
@@ -1857,6 +1876,7 @@ vendor/lib/vendor.somc.hardware.security.secd@1.1.so
 vendor/lib64/libdevice_security_vendor.so
 vendor/lib64/libifaa.so
 vendor/lib64/libmiscta.so
+vendor/lib64/librkp.so
 vendor/lib64/libsuntory.so
 vendor/lib64/vendor.somc.hardware.miscta@1.0.so
 vendor/lib64/vendor.somc.hardware.security.secd@1.1.so
@@ -1966,8 +1986,13 @@ vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libhidparser.so
 vendor/lib64/libsensorcal.so
-vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_direct_channel_stub.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsutils.so
+vendor/lib64/libssc.so
 vendor/lib64/sensors.ssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
@@ -2073,6 +2098,8 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.vpp@2.0-service.xml
+vendor/lib64/libpfter.so
+vendor/lib64/libswiqisettinghelper.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvppcommon.so
 vendor/lib64/libvpphcp.so
@@ -2189,31 +2216,3 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvaidl.so
-
-# Other
-vendor/etc/disp_color_conf.xml
-vendor/etc/disp_panel_conf.xml
-vendor/etc/seccomp_policy/qms.policy
-vendor/lib/libclstc_algorithm_adapter.so
-vendor/lib/libclstc_hdr.so
-vendor/lib64/jcos_nq_client.so
-vendor/lib64/libSnpeHtpV73Stub.so
-vendor/lib64/libSonyDisplayProperties.so
-vendor/lib64/lib_bix_idd.so
-vendor/lib64/libchrome.so
-vendor/lib64/libclstc_hdr.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libpfter.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/librkp.so
-vendor/lib64/libsensorslog.so
-vendor/lib64/libsns_direct_channel_stub.so
-vendor/lib64/libsnsapi.so
-vendor/lib64/libsnsutils.so
-vendor/lib64/libsonydseehxwrapper.so
-vendor/lib64/libssc.so
-vendor/lib64/libswiqisettinghelper.so
-vendor/lib64/ls_nq_client.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/vendor.somc.hardware.aidlradio-V1-ndk.so
-vendor/lib64/vendor.somc.hardware.videoeffect-V1-ndk_platform.so
