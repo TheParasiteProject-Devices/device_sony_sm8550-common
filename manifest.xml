@@ -475,4 +475,8 @@
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.light</name>
+        <fqname>ILight/default</fqname>
+    </hal>
 </manifest>
