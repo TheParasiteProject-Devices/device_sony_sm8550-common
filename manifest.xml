@@ -404,6 +404,8 @@
     <hal format="hidl">
         <name>vendor.semc.hardware.display</name>
         <transport>hwbinder</transport>
+        <fqname>@2.3::IDisplay/default</fqname>
+        <fqname>@2.3::IFramerateController/default</fqname>
         <fqname>@2.5::IDisplay/default</fqname>
         <fqname>@2.5::IFramerateController/default</fqname>
     </hal>
