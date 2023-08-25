@@ -554,4 +554,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XperiaParts
 
+# Dolby Tile Service
+PRODUCT_PACKAGES += \
+    DolbyTileService
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
