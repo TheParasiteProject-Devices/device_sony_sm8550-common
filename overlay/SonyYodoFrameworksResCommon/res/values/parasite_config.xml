@@ -2,4 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
      <!-- Boost Framework -->
      <bool name="config_supportsBoostFramework">true</bool>
+
+     <!-- Pocket Lock -->
+     <bool name="config_pocketModeSupported">true</bool>
 </resources>
