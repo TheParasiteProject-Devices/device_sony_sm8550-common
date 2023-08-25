@@ -1502,6 +1502,7 @@ vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
 
 # Sensors
+system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
