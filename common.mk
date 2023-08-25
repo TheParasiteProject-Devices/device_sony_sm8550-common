@@ -562,3 +562,6 @@ PRODUCT_PACKAGES += \
     DolbyTileService
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Sony Extra
+$(call inherit-product-if-exists, vendor/sony/extra-sagami/extra.mk)
