@@ -10,6 +10,12 @@
          is no longer indicative, and a separate config now exists for each band -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
+    <!-- Enable Aware NDP interface selection on interface that already has network set up.
+     Note: the default AOSP Android does not support multiple networks on the same Aware NDI.
+     Enabling this configuration will restore legacy behavior but may result in incorrect behavior.
+     -->
+    <bool name="config_wifiAllowMultipleNetworksOnSameAwareNdi">true</bool>
+
     <!-- Indicates that bridged AP mode is supported on this device -->
     <bool translatable="false" name="config_wifiBridgedSoftApSupported">true</bool>
 
@@ -53,6 +59,9 @@
 
     <!-- Wifi driver supports IEEE80211AX for softap -->
     <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
          This mechanism allows the host to remain in suspend state and the dongle to actively
@@ -99,6 +108,11 @@
 
     <!-- Indicates that STA + bridged AP concurrency mode is supported on this device -->
     <bool translatable="false" name="config_wifiStaWithBridgedSoftApConcurrencySupported">true</bool>
+
+    <!-- Integer threshold for low network score, should be somewhat less than the entry threshhold -->
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-90</integer>
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-78</integer>
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
 
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default">Xperia</string>
