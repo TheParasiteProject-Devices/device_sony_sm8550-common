@@ -565,3 +565,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Sony Extra
 $(call inherit-product-if-exists, vendor/sony/extra-sagami/extra.mk)
+
+PRODUCT_VENDOR_PROPERTIES += \
+ro.audio.spatializer_enabled=true \
+ro.audio.spatializer_transaural_enabled_default=false \
+persist.vendor.audio.spatializer.speaker_enabled=true
