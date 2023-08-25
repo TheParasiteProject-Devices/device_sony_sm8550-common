@@ -13,7 +13,7 @@
     <integer name="config_wifiInitialPartialScanChannelMaxCount">10</integer>
 
     <!-- Integer threshold for low network score, should be somewhat less than the entry threshhold -->
-    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-81</integer>
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-90</integer>
     <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-78</integer>
-    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-78</integer>
+    <integer name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-85</integer>
 </resources>
