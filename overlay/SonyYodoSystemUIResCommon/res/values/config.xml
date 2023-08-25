@@ -45,7 +45,7 @@
 
     <!-- Amount of time in seconds to wait before shifting elements around when the burn-in
          protection is enabled for status bar and navigation bar -->
-    <integer name="config_shift_interval">45</integer>
+    <integer name="config_shift_interval">60</integer>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
@@ -63,4 +63,7 @@
     <!-- Icons that don't show in a collapsed statusbar on keyguard -->
     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
     </string-array>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
 </resources>

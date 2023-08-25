@@ -22,6 +22,6 @@
 
     <!-- The maximum offset in either direction that elements are moved horizontally to prevent
          burn-in on status bar and navigation bar. -->
-    <dimen name="horizontal_max_shift">4.0dp</dimen>
+    <dimen name="horizontal_max_shift">2.0dp</dimen>
 
 </resources>
