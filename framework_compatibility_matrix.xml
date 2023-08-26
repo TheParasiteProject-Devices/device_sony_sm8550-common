@@ -182,4 +182,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.somc.hardware.aidlradio</name>
+        <interface>
+            <name>ISomcHook</name>
+            <instance>somchook0</instance>
+            <instance>somchook1</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
