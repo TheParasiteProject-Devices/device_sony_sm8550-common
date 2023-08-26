@@ -197,4 +197,11 @@
             <instance>default</instance>
         </interface>
    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.input.processor</name>
+        <interface>
+            <name>IInputProcessor</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
