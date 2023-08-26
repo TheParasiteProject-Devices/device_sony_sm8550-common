@@ -190,4 +190,11 @@
             <instance>somchook1</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+   </hal>
 </compatibility-matrix>
