@@ -525,6 +525,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V1-ndk_platform.vendor \
     android.hardware.vibrator-sony.service.cs40l25
 
 # QTI service tracker
