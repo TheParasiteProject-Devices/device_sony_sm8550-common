@@ -788,7 +788,7 @@
     </path>
 
     <path name="headset-mic">
-        <ctl name="TX_DEC0 Volume" value="84" />
+        <ctl name="TX_DEC0 Volume" value="95" />
         <path name="amic2" />
     </path>
 
