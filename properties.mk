@@ -159,6 +159,7 @@ bluetooth.profile.pan.panu.enabled?=true \
 bluetooth.profile.pbap.server.enabled?=true \
 bluetooth.profile.ccp.server.enabled?=true \
 bluetooth.profile.vcp.controller.enabled?=true \
+bluetooth.profile.sap.server.enabled?=true \
 persist.bluetooth.a2dp_offload.disabled=false \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
