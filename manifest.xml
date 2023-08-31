@@ -507,4 +507,9 @@
         <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
         <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.soundtrigger</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.3::ISoundTriggerHw/default</fqname>
+    </hal>
 </manifest>
