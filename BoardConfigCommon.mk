@@ -282,6 +282,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # Sepolicy
 TARGET_SEPOLICY_DIR := kalama
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include hardware/sony/sepolicy/qti/SEPolicy.mk
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
