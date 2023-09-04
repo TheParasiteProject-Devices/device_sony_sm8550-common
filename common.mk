@@ -556,3 +556,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Parts
 $(call inherit-product-if-exists, packages/apps/XperiaParts/config.mk)
+
+# Sony Extra
+TARGET_SONY_EXTRA_PATH := vendor/sony/extra-yodo
+$(call inherit-product-if-exists, $(TARGET_SONY_EXTRA_PATH)/extra.mk)
