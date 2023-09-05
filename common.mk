@@ -480,6 +480,11 @@ PRODUCT_SOONG_NAMESPACES += \
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.sony \
+    android.hardware.lights-service.qti
+
 # Telephony
 PRODUCT_PACKAGES += \
     SonyEuicc \
