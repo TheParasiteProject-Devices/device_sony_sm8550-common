@@ -469,6 +469,11 @@ PRODUCT_PACKAGES += \
     android.hardware.light-V1-ndk_platform.vendor \
     android.hidl.base@1.0.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.sony \
+    android.hardware.lights-service.qti
+
 # Telephony
 PRODUCT_PACKAGES += \
     SonyEuicc \
