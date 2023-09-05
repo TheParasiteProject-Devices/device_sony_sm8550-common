@@ -1,4 +1,8 @@
 /*
+ * Copyright (C) 2021, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2021-2022, Qualcomm Innovation Center, Inc. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,103 +18,298 @@
  * limitations under the License.
  */
 
+/*
+ * Changes from Qualcomm Innovation Center are provided under the following license:
+ *
+ * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted (subject to the limitations in the disclaimer
+ * below) provided that the following conditions are met:
+ *
+ *    * Redistributions of source code must retain the above copyright
+ *      notice, this list of conditions and the following disclaimer.
+ *
+ *    * Redistributions in binary form must reproduce the above
+ *      copyright notice, this list of conditions and the following
+ *      disclaimer in the documentation and/or other materials provided
+ *      with the distribution.
+ *
+ *    * Neither the name of Qualcomm Innovation Center, Inc.nor the
+ *      names of its contributors may be used to endorse or promote
+ *      products derived from this software without specific prior
+ *      written permission.
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT
+ * RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS
+ * PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+ * BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+ * OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+#define LOG_TAG "vendor.qti.lights"
+
 #include "Lights.h"
 #include <log/log.h>
 #include <android-base/logging.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+namespace {
+
+enum rgb_led {
+    LED_RED,
+    LED_GREEN,
+    LED_BLUE,
+};
+
+static const char *rgb_led_name[] = {
+    [LED_RED] = "red",
+    [LED_GREEN] = "green",
+    [LED_BLUE] = "blue",
+};
+
+static int write_str_to_file(const char *path, char const *str) {
+    int fd;
+
+    fd = open(path, O_WRONLY);
+    if (fd >= 0) {
+        ssize_t amt = write(fd, str, strlen(str));
+        close(fd);
+
+        if (amt == -1) {
+            ALOGE("Write to %s failed: %d", path, -errno);
+            return -errno;
+        }
+
+        return 0;
+    }
+
+    ALOGE("Could not open %s: %d", path, -errno);
+    return -errno;
+}
+
+static int write_int_to_file(const char *path, int value) {
+    int fd;
+
+    fd = open(path, O_WRONLY);
+    if (fd >= 0) {
+        char buf[16];
+        size_t bytes = snprintf(buf, sizeof(buf), "%d\n", value);
+        ssize_t amt = write(fd, buf, bytes);
+        close(fd);
+
+        if (amt == -1) {
+            ALOGE("Write to %s failed: %d", path, -errno);
+            return -errno;
+        }
+
+        return 0;
+    }
+
+    ALOGE("Could not open %s: %d", path, -errno);
+    return -errno;
+}
+
+static int setLedBreathParam(enum rgb_led led, int breath) {
+    char file[48];
+    int rc;
+
+    snprintf(file, sizeof(file),"/sys/class/leds/%s/breath", rgb_led_name[led]);
+    rc = write_int_to_file(file, breath);
+    if (rc < 0)
+        ALOGE("%s does not support breath", rgb_led_name[led]);
+
+    return rc;
+}
+
+static int setLedDelayParams(enum rgb_led led, int flashOnMs, int flashOffMs) {
+    char file_on[48];
+    char file_off[48];
+    int rc;
+    int retries = 20;
+
+    snprintf(file_on, sizeof(file_on), "/sys/class/leds/%s/trigger", rgb_led_name[led]);
+    rc = write_str_to_file(file_on, "timer");
+    if (rc < 0) {
+        ALOGD("%s doesn't support timer trigger\n", rgb_led_name[led]);
+        return rc;
+    }
+
+    snprintf(file_off, sizeof(file_off), "/sys/class/leds/%s/delay_off", rgb_led_name[led]);
+    snprintf(file_on, sizeof(file_on), "/sys/class/leds/%s/delay_on", rgb_led_name[led]);
+
+    while(retries--) {
+        ALOGD("retry %d set delay_off and delay_on\n", retries);
+        usleep(2000);
+
+        rc = write_int_to_file(file_off, flashOffMs);
+        if (rc < 0)
+            continue;
+
+        rc = write_int_to_file(file_on, flashOnMs);
+        if (!rc)
+            break;
+    }
+
+    if (rc < 0) {
+        ALOGE("Error in writing to delay_on/off for %s\n", rgb_led_name[led]);
+        return rc;
+    }
+
+    return 0;
+}
+
+static int setLedBrightness(enum rgb_led led, int brightness) {
+    int rc;
+    char file[48];
+
+    snprintf(file, sizeof(file), "/sys/class/leds/%s/trigger", rgb_led_name[led]);
+    rc = write_str_to_file(file, "none");
+    if (rc < 0) {
+        ALOGD("%s failed to set trigger to none\n", rgb_led_name[led]);
+        return rc;
+    }
+
+    snprintf(file, sizeof(file), "/sys/class/leds/%s/brightness", rgb_led_name[led]);
+    rc = write_int_to_file(file, brightness);
+    if (rc < 0)
+        return rc;
+
+    return rc;
+}
+} // namespace anonymous
 
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace light {
 
-const static std::map<LightType, const char*> kLogicalLights = {
-    {LightType::BACKLIGHT,     LIGHT_ID_BACKLIGHT},
-    {LightType::KEYBOARD,      LIGHT_ID_KEYBOARD},
-    {LightType::BUTTONS,       LIGHT_ID_BUTTONS},
-    {LightType::BATTERY,       LIGHT_ID_BATTERY},
-    {LightType::NOTIFICATIONS, LIGHT_ID_NOTIFICATIONS},
-    {LightType::ATTENTION,     LIGHT_ID_ATTENTION},
-    {LightType::BLUETOOTH,     LIGHT_ID_BLUETOOTH},
-    {LightType::WIFI,          LIGHT_ID_WIFI}
+const static std::vector<LightType> kLogicalLights = {
+    LightType::BACKLIGHT,
+    LightType::KEYBOARD,
+    LightType::BUTTONS,
+    LightType::BATTERY,
+    LightType::NOTIFICATIONS,
+    LightType::ATTENTION,
+    LightType::BLUETOOTH,
+    LightType::WIFI,
 };
 
-light_device_t* getLightDevice(const char* name) {
-    light_device_t* lightDevice;
-    const hw_module_t* hwModule = NULL;
-    int ret = hw_get_module (LIGHTS_HARDWARE_MODULE_ID, &hwModule);
-    if (ret == 0) {
-        ret = hwModule->methods->open(hwModule, name,
-            reinterpret_cast<hw_device_t**>(&lightDevice));
-        if (ret != 0) {
-            ALOGE("light_open %s %s failed: %d", LIGHTS_HARDWARE_MODULE_ID, name, ret);
-        }
-    } else {
-        ALOGE("hw_get_module %s %s failed: %d", LIGHTS_HARDWARE_MODULE_ID, name, ret);
-    }
-    if (ret == 0) {
-        return lightDevice;
-    } else {
-        ALOGE("Light passthrough failed to load legacy HAL.");
-        return nullptr;
+Lights::Lights() {
+    for (auto i = kLogicalLights.begin(); i != kLogicalLights.end(); i++) {
+        HwLight hwLight{};
+        hwLight.id = (int)(*i);
+        hwLight.type = *i;
+        hwLight.ordinal = 0;
+        mAvailableLights.emplace_back(hwLight);
     }
 }
 
-Lights::Lights() {
-    std::map<int, light_device_t*> lights;
-    std::vector<HwLight> availableLights;
-    int lightCount =0;
-    for(auto const &pair : kLogicalLights) {
-        LightType type = pair.first;
-        const char* name = pair.second;
-        light_device_t* lightDevice = getLightDevice(name);
-        lightCount++;
-        if (lightDevice != nullptr) {
-            HwLight hwLight{};
-            hwLight.id = (int)type;
-            hwLight.type = type;
-            hwLight.ordinal = 0;
-            lights[hwLight.id] = lightDevice;
-            availableLights.emplace_back(hwLight);
-        }
+int Lights::setRgbLedsParams(const HwLightState& state) {
+    int rc = 0;
+    int const colorRGB = state.color;
+    int const red = (colorRGB >> 16) & 0xFF;
+    int const green = (colorRGB >> 8) & 0xFF;
+    int const blue = colorRGB & 0xFF;
+    int const breath = (state.flashOnMs != 0 && state.flashOffMs != 0);
+
+    switch (state.flashMode) {
+    case FlashMode::HARDWARE:
+        if (!!red)
+            rc = setLedBreathParam(LED_RED, breath);
+        if (!!green)
+            rc |= setLedBreathParam(LED_GREEN, breath);
+        if (!!blue)
+            rc |= setLedBreathParam(LED_BLUE, breath);
+        /* Fallback to blinking if breath is not supported */
+        if (rc == 0)
+            break;
+    case FlashMode::TIMED:
+        if (!!red)
+            rc = setLedDelayParams(LED_RED, state.flashOnMs, state.flashOffMs);
+        if (!!green)
+            rc |= setLedDelayParams(LED_GREEN, state.flashOnMs, state.flashOffMs);
+        if (!!blue)
+            rc |= setLedDelayParams(LED_BLUE, state.flashOnMs, state.flashOffMs);
+        /* Fallback to constant on if blinking is not supported */
+        if (rc == 0)
+            break;
+    case FlashMode::NONE:
+        FALLTHROUGH_INTENDED;
+    default:
+        rc = setLedBrightness(LED_RED, red);
+        rc |= setLedBrightness(LED_GREEN, green);
+        rc |= setLedBrightness(LED_BLUE, blue);
+        break;
     }
-    mAvailableLights = availableLights;
-    mLights = lights;
-    maxLights = lightCount;
+
+    ALOGD("colorRGB = %08X, mode = %d, onMs = %d, offMs = %d, rc: %d", colorRGB, state.flashMode, state.flashOnMs, state.flashOffMs, rc);
+
+    return rc;
 }
 
 ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
-    if (id >= maxLights) {
+    /* For QMAA compliance, return OK even if leds device doesn't exist */
+    if (!mLedDetected) {
+        ALOGE("Tri Leds device doesn't exist");
+        return ndk::ScopedAStatus::ok();
+    }
+
+    if (id < 0 || id >= mAvailableLights.size()) {
         ALOGE("Invalid Light id : %d", id);
         return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
-    auto it = mLights.find(id);
-    if (it == mLights.end()) {
-        ALOGE("Light not supported");
-        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-    }
-    light_device_t* hwLight = it->second;
-    light_state_t legacyState {
-        .color = static_cast<unsigned int>(state.color),
-        .flashMode = static_cast<int>(state.flashMode),
-        .flashOnMS = state.flashOnMs,
-        .flashOffMS = state.flashOffMs,
-        .brightnessMode = static_cast<int>(state.brightnessMode),
-    };
-    int ret = hwLight->set_light(hwLight, &legacyState);
-    switch (ret) {
-        case -ENOSYS:
-            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-        case 0:
-            return ndk::ScopedAStatus::ok();
-        default:
+
+    HwLight const& light = mAvailableLights[id];
+
+    // Don't set LEDs for other notifications if battery notification is set
+    if (light.type != LightType::BATTERY && mBatteryNotification)
+        return ndk::ScopedAStatus::ok();
+
+    int ret = setRgbLedsParams(state);
+    if (ret != 0)
             return ndk::ScopedAStatus::fromServiceSpecificError(ret);
-    }
+
+    if (light.type == LightType::BATTERY)
+        mBatteryNotification = (state.color & 0x00FFFFFF);
+
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
+    char file[48];
+    int fd;
+
     for (auto i = mAvailableLights.begin(); i != mAvailableLights.end(); i++) {
         lights->push_back(*i);
     }
+
+    mLedDetected = false;
+    snprintf(file, sizeof(file), "/sys/class/leds/%s/brightness", rgb_led_name[LED_RED]);
+    fd = open(file, O_RDONLY);
+    if (fd >= 0) {
+       mLedDetected = true;
+       close(fd);
+    } else {
+       ALOGE("Couldn't open %s", file);
+    }
+
     return ndk::ScopedAStatus::ok();
 }
 
