@@ -15,6 +15,8 @@ on init
 
     setprop ro.oem.key1 ${ro.boot.hardware.sku}
 
+    setprop persist.sys.usb.config adb
+
 on property:ro.boot.hardware.sku=""
     setprop ro.oem.key1 c999999
 
