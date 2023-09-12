@@ -50,15 +50,6 @@ persist.sys.fflag.override.settings_network_and_internet_v2=true
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
-# SOMC
-# ro.semc.ms_type_id=PM-1430-BV
-# ro.semc.product.device=DQ
-# ro.semc.product.model=XQ-DQ72
-# ro.semc.product.name=Xperia 1 V
-# ro.semc.version.sw_revision=67.0.A.4.51
-# ro.semc.version.sw_type=user
-# ro.semc.version.sw_variant=GLOBAL-C2
-
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
