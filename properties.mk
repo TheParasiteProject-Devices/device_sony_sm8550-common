@@ -426,16 +426,6 @@ vendor.dynamic_sensor.setup.timeout.ms=1600
 PRODUCT_VENDOR_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
-# SOMC
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.semc.ms_type_id=PM-1430-BV \
-ro.semc.product.device=DQ \
-ro.semc.product.model=XQ-DQ54 \
-ro.semc.product.name=Xperia 1 V \
-ro.semc.version.sw_revision=67.0.A.4.51 \
-ro.semc.version.sw_type=user \
-ro.semc.version.sw_variant=GLOBAL-C2
-
 # SSR
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.ssr.restart_level=ALL_ENABLE
