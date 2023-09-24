@@ -462,12 +462,7 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/sony/sm8550 \
     kernel/sony/sm8550-modules
 
-# Sony Charger Interface
-PRODUCT_PACKAGES += \
-    vendor.sony.charger \
-    vendor.sony.charger-service
-
-# Sony Display Interface
+# Sony Display interface
 PRODUCT_PACKAGES += \
     vendor.semc.hardware.display@2.0.vendor \
     vendor.semc.hardware.display@2.1.vendor \
