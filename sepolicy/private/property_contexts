@@ -1,1 +1,4 @@
 sony.screen_brightness     u:object_r:display_brightness_prop:s0
+
+# Fastbootd
+ro.fastbootd.available	u:object_r:exported_default_prop:s0
