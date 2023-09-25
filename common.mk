@@ -149,6 +149,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
+PRODUCT_VENDOR_PROPERTIES += \
+ro.fastbootd.available=true
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.lineage
