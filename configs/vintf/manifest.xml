@@ -36,6 +36,7 @@
         <version>2.4</version>
         <interface>
             <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
             <instance>legacy/1</instance>
         </interface>
     </hal>
