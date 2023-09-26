@@ -506,9 +506,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti-v2
