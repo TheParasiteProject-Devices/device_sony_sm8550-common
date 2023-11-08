@@ -1577,3 +1577,12 @@ vendor/lib64/libvmfilexfer.so|8520a88db5dedc1a7226be4b3aeb7e6bef6d4dce
 
 # Thermal engine
 vendor/bin/thermal-engine-v2|b60f5ed4b79da2091970d24f97074ce2b619969b
+
+# Alarm - from qssi-user-14-UKQ1.230804.001-2309192131-release-keys
+system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|c31a2bdbed4398c95812ac2d3d0162d632055e00
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|7894b5b94626fe4f6beb0761dab8221295382258
+vendor/bin/power_off_alarm|4daf3facda380ea8ef31ad3b56f1d216eec4183a
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/etc/vintf/manifest/vendor.qti.hardware.alarm.xml|7721d3f413538eb0cd328206e590aef3219c0229
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0b5b86c7ea668197244b83dad4d686897b5e4fb4
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8956937951c6f99727ace3380f46275e62c932c0
