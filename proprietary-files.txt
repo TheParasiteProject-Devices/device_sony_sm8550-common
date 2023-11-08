@@ -1830,7 +1830,7 @@ vendor/lib64/libwvaidl.so
 
 # Pinned section
 # Thermal engine - from XQ-DQ54_Customized EU-UK_67.1.A.2.112
-vendor/bin/thermal-engine-v2|b60f5ed4b79da2091970d24f97074ce2b619969b
+vendor/bin/thermal-engine-v2|0ad7864e635cee88c022a2d9a61df4212178dbdc
 
 # Alarm - from qssi-user-14-UKQ1.230804.001-2309192131-release-keys
 system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|c31a2bdbed4398c95812ac2d3d0162d632055e00
