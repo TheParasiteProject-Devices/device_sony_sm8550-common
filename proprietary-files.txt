@@ -1838,4 +1838,4 @@ vendor/lib64/libtinyxml2_1.so|2b1b8300b0fd7a6059d13dae00f60735445725f9
 vendor/lib64/libvmfilexfer.so|8520a88db5dedc1a7226be4b3aeb7e6bef6d4dce
 
 # Thermal engine - from XQ-DQ54_Customized EU-UK_67.1.A.2.112
-vendor/bin/thermal-engine-v2|b60f5ed4b79da2091970d24f97074ce2b619969b
+vendor/bin/thermal-engine-v2|0ad7864e635cee88c022a2d9a61df4212178dbdc
