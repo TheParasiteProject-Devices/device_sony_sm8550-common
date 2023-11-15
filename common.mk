@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7:64 \
     vendor.qti.hardware.camera.aon@1.3.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.common-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
