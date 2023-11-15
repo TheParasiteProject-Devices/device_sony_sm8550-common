@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V1-ndk.vendor \
     android.hardware.camera.provider@2.4.vendor \
     vendor.qti.hardware.camera.aon@1.3.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    android.hardware.camera.common-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.ar.xml \
