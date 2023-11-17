@@ -445,7 +445,7 @@ vendor.dynamic_sensor.setup.timeout.ms=1600
 
 # Shutdown
 PRODUCT_VENDOR_PROPERTIES += \
-sys.vendor.shutdown.waittime=500
+ro.build.shutdown_timeout=2
 
 # SSR
 PRODUCT_SYSTEM_PROPERTIES += \
