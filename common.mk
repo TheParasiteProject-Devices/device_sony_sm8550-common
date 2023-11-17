@@ -572,9 +572,5 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
-# XperiaParts
-PRODUCT_PACKAGES += \
-    XperiaParts
-
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
