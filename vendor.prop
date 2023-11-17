@@ -282,6 +282,7 @@ vendor.dynamic_sensor.setup.timeout.ms=1600
 
 # shutdown
 sys.vendor.shutdown.waittime=500
+ro.build.shutdown_timeout=0
 
 # Sensors
 persist.vendor.sensors.debug.hal=0
