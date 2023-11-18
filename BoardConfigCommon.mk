@@ -219,8 +219,7 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/configs/vintf/manifest.xml \
