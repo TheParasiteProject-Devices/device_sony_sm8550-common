@@ -47,6 +47,10 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
         append_firmware_calls_to_makefiles "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt"
     fi
 
+    if [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
+        append_firmware_calls_to_makefiles "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt"
+    fi
+
     # Finish
     write_footers
 fi
