@@ -615,5 +615,8 @@ PRODUCT_COPY_FILES += \
 # XperiaModules
 $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
 
+# Sony Extra
+$(call inherit-product-if-exists, vendor/sony/extra-yodo/config.mk)
+
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
