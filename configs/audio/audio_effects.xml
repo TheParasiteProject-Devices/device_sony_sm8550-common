@@ -176,7 +176,9 @@
             <apply effect="dlb_system_listener"/>
         </stream>
         <stream type="music">
+            <!-- Disable volume listener
             <apply effect="dlb_music_listener"/>
+            -->
         </stream>
         <stream type="ring">
             <apply effect="dlb_ring_listener"/>
