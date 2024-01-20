@@ -619,6 +619,8 @@ $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
 $(call inherit-product-if-exists, vendor/sony/extra-yodo/config.mk)
 
 # Dolby
+TARGET_SHIPS_CUSTOM_DOLBY := true
+TARGET_CUSTOM_DOLBY_NO_LAUNCHER := true
 $(call inherit-product, vendor/dolby/dolby.mk)
 $(call inherit-product, vendor/dolby-vision/dolby-vision.mk)
 
