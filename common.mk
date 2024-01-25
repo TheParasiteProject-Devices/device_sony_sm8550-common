@@ -615,5 +615,8 @@ TARGET_CUSTOM_DOLBY_NO_LAUNCHER := true
 $(call inherit-product, vendor/dolby/dolby.mk)
 $(call inherit-product, vendor/dolby-vision/dolby-vision.mk)
 
+# QTI Telephony
+$(call inherit-product, vendor/sony/qti-telephony/config.mk)
+
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
