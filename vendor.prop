@@ -143,6 +143,7 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_2_support=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
+vendor.hw.fm.init=0
 
 # Camera
 ro.camera.enableCamera1MaxZsl=1
