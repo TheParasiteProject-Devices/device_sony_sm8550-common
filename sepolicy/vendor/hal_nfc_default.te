@@ -10,3 +10,5 @@ allow hal_nfc_default tad:unix_stream_socket { connectto };
 
 set_prop(hal_nfc_default, vendor_nfc_prop)
 get_prop(hal_nfc_default, vendor_nfc_prop)
+
+allow hal_nfc_default oemfs:dir search;
