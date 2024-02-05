@@ -8,7 +8,7 @@
 /(vendor|system/vendor|odm|vendor/odm)/bin/nv_updater             u:object_r:nv_updater_exec:s0
 
 # Init
-/vendor/bin/init.lahaina.post_boot.sh          u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init.kalama.post_boot.sh          u:object_r:vendor_qti_init_shell_exec:s0
 
 # Data files
 /mnt/rca                                  u:object_r:idd_rca_dir:s0

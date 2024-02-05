@@ -202,7 +202,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
 
-service lahaina-post-boot /vendor/bin/init.lahaina.post_boot.sh
+service kalama-post-boot /vendor/bin/init.kalama.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
