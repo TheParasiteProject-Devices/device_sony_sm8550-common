@@ -3,4 +3,7 @@ ro.fastbootd.available	u:object_r:exported_default_prop:s0
 
 # Audio
 audio.sys.noisy.broadcast.delay u:object_r:audio_prop:s0
-ro.qc.sdk.audio.fluencetype u:object_r:audio_prop:s0
+ro.qc.sdk.audio. u:object_r:audio_prop:s0
+audio.sys.offload.pstimeout.secs u:object_r:audio_prop:s0
+af.resampler.quality u:object_r:audio_prop:s0
+ro.audio.resampler. u:object_r:audio_prop:s0
