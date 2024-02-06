@@ -261,7 +261,6 @@ persist.vendor.radio.oem_socket=true
 persist.vendor.radio.enableadvancedscan=true
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ril.subscription.types=NV,RUIM
-ro.com.android.dataroaming=true
 
 # Sensor
 vendor.dynamic_sensor.setup.timeout.ms=1600
