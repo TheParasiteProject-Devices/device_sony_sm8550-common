@@ -138,7 +138,6 @@ bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 persist.bluetooth.a2dp_offload.disabled=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
@@ -181,7 +180,6 @@ vendor.display.enable_hdr10_gpu_target=0
 vendor.display.enable_optimize_refresh=0
 vendor.display.use_smooth_motion=0
 vendor.display.vds_allow_hwc=1
-vendor.display.disable_rounded_corner=1
 vendor.display.enable_rc_support=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
@@ -270,7 +268,6 @@ vendor.dynamic_sensor.setup.timeout.ms=1600
 
 # shutdown
 sys.vendor.shutdown.waittime=500
-ro.build.shutdown_timeout=0
 
 # Sensors
 persist.vendor.sensors.debug.hal=0
