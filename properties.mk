@@ -135,6 +135,9 @@ vendor.audio.usb.out.period_us=2500 \
 vendor.audio.usb.perio=2500
 
 # Bluetooth
+PRODUCT_PRODUCT_PROPERTIES += \
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
 PRODUCT_VENDOR_PROPERTIES += \
 bluetooth.device.class_of_device=90,2,12 \
 bluetooth.hardware.power.idle_cur_ma=6 \
@@ -165,7 +168,6 @@ bluetooth.profile.pbap.server.enabled?=true \
 bluetooth.profile.sap.server.enabled?=true \
 bluetooth.profile.vcp.controller.enabled?=true \
 persist.bluetooth.a2dp_offload.disabled=false \
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
 persist.vendor.bt.aac_frm_ctl.enabled=true \
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true \
@@ -216,6 +218,9 @@ debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.frame_rate_multiple_threshold=120
 
+PRODUCT_PRODUCT_PROPERTIES += \
+vendor.display.disable_rounded_corner=1
+
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.sf.color_mode=9 \
 persist.sys.sf.color_saturation=1.0 \
@@ -226,7 +231,6 @@ vendor.display.disable_excl_rect_partial_fb=1 \
 vendor.display.disable_excl_rect=0 \
 vendor.display.disable_hw_recovery_dump=1 \
 vendor.display.disable_offline_rotator=1 \
-vendor.display.disable_rounded_corner=1 \
 vendor.display.disable_scaler=0 \
 vendor.display.disable_sdr_dimming=1 \
 vendor.display.disable_sdr_histogram=1 \
@@ -408,7 +412,9 @@ vendor.dynamic_sensor.setup.timeout.ms=1600
 
 # Shutdown
 PRODUCT_VENDOR_PROPERTIES += \
-sys.vendor.shutdown.waittime=500 \
+sys.vendor.shutdown.waittime=500
+
+PRODUCT_SYSTEM_PROPERTIES += \
 ro.build.shutdown_timeout=0
 
 # Suspend properties
