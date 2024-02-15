@@ -46,6 +46,9 @@ persist.vendor.data.mode=concurrent
 # Radio
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 
+# Shutdown
+ro.build.shutdown_timeout=0
+
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
