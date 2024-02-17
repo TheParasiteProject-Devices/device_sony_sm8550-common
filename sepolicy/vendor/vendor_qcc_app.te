@@ -1,0 +1,1 @@
+allow vendor_qcc_app vendor_sysfs_soc_sensitive:file { read };
