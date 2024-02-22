@@ -1479,7 +1479,6 @@ vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 # WiFi
 vendor/bin/cnss-daemon
 vendor/etc/wifi/icm.conf
-vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
