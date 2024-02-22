@@ -200,7 +200,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 # Disable MTE Async for system server
 PRODUCT_SYSTEM_PROPERTIES += \
-arm64.memtag.process.system_server=off
+persist.arm64.memtag.system_server=off
 
 # Display
 PRODUCT_ODM_PROPERTIES += \
