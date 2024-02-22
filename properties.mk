@@ -363,7 +363,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 debug.c2.use_dmabufheaps=1 \
 debug.stagefright.c2inputsurface=-1 \
 debug.stagefright.ccodec=4 \
-debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank=0 \
+ro.mediaserver.64b.enable=true
 
 # Netmgr
 PRODUCT_SYSTEM_PROPERTIES += \
