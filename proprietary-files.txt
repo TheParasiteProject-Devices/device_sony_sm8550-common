@@ -800,6 +800,7 @@ system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
@@ -814,6 +815,7 @@ system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.factoryaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 vendor/bin/ims_rtp_daemon
