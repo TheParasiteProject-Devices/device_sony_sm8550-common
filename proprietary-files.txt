@@ -520,7 +520,6 @@ vendor/lib64/libeva_util.so
 
 # eUICC
 product/etc/permissions/jp.co.sony.mc.euiccmemoryreset.xml
-product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 product/priv-app/EuiccMemoryReset/EuiccMemoryReset.apk;PRESIGNED
 
 # ExtLight
