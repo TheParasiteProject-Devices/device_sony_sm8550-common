@@ -313,7 +313,7 @@ persist.vendor.ims.disableADBLogs=1 \
 persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableIMSLogs=1 \
 persist.vendor.ims.disableQXDMLogs=1 \
-persist.vendor.rcs.singlereg.feature=1
+persist.vendor.rcs.singlereg.feature=0
 
 # Incremental FS
 PRODUCT_VENDOR_PROPERTIES += \
