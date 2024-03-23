@@ -389,10 +389,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power.stats
 
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.sony
-
 # Properties
 include $(LOCAL_PATH)/properties.mk
 
