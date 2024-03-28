@@ -38,21 +38,6 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 
-EGL_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib
-$(EGL_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "EGL lib symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
-	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
-	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
-
-EGL_LIB64_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64
-$(EGL_LIB64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "EGL lib64 symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
-	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
-	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
 
 WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
 $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -69,8 +54,6 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(CNE_SYMLINKS) \
-    $(EGL_LIB_SYMLINKS) \
-    $(EGL_LIB64_SYMLINKS) \
     $(WIFI_FIRMWARE_SYMLINKS)
 
 endif
