@@ -35,6 +35,10 @@ on property:vendor.post_boot.parsed=1
     write /proc/irq/246/smp_affinity_list 2
     write /proc/irq/43/smp_affinity_list 1
 
+    # Kill WALT CPU input boost
+    write /proc/sys/walt/input_boost/input_boost_freq "0 0 0 0 0 0 0"
+    write /proc/sys/walt/input_boost/input_boost_ms 0
+
 on property:ro.vendor.ltalabel.model=XQ-BC72
     setprop ro.vendor.product.rf.id PDX215-C2
 
