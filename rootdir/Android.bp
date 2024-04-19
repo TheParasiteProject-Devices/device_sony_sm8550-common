@@ -113,3 +113,9 @@ sh_binary {
     src: "init.kernel.post_boot-kalama.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.sim.restart.sh",
+    src: "init.sim.restart.sh",
+}
+
