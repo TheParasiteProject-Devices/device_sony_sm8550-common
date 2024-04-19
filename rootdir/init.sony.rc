@@ -9,6 +9,12 @@ service msim_sh /odm/bin/init.qcom.msim.sh
     group root
     oneshot
 
+service sim-restart /odm/bin/init.sim.restart.sh
+    class main
+    user root
+    oneshot
+    disabled
+
 on boot
     # Enable smart charging
     wait /sys/class/battchg_ext/smart_charging_activation
@@ -146,3 +152,5 @@ on property:sys.boot_completed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
+
+    start sim-restart
