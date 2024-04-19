@@ -447,7 +447,8 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libsysutils.vendor \
     libusbhost.vendor \
-    libxml2
+    libxml2 \
+    sim-restart
 
 # Sensors
 PRODUCT_PACKAGES += \
