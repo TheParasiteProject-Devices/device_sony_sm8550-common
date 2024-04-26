@@ -32,3 +32,7 @@ persist.bluetooth.bqr.vnd_trace_mask=0
 suspend.short_suspend_threshold_millis=2000
 suspend.max_sleep_time_millis=40000
 suspend.short_suspend_backoff_enabled=true
+
+# Watchdog timeout loop breaker
+framework_watchdog.fatal_window.second=600
+framework_watchdog.fatal_count=3
