@@ -27,3 +27,8 @@ vendor.display.disable_rounded_corner=1
 persist.bluetooth.bqr.event_mask=295006
 persist.bluetooth.bqr.vnd_quality_mask=16
 persist.bluetooth.bqr.vnd_trace_mask=0
+
+# Suspend properties
+suspend.short_suspend_threshold_millis=2000
+suspend.max_sleep_time_millis=40000
+suspend.short_suspend_backoff_enabled=true
