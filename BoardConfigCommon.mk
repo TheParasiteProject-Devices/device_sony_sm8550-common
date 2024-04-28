@@ -14,6 +14,13 @@
 # limitations under the License.
 #
 
+# Mainline
+include build/make/target/board/BoardConfigMainlineCommon.mk
+TARGET_USERIMAGES_USE_EXT4 := false
+TARGET_NO_RECOVERY := false
+TARGET_LMKD_STATS_LOG := false
+BOARD_AVB_ROLLBACK_INDEX := 0
+
 BOARD_VENDOR := sony
 
 COMMON_PATH := device/sony/sm8550-common
