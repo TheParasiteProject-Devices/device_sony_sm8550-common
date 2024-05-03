@@ -51,6 +51,7 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 TARGET_OTA_ADDITIONAL_OPTIONS := \
+    --enable_puffdiff=true \
     --enable_zucchini=true \
     --enable_lz4diff=true \
     --enable_vabc_xor=true
