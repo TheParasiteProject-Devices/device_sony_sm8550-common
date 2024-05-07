@@ -155,7 +155,6 @@ on boot
     chmod 0444 /sys/kernel/debug/battery_debug/votables/fv_tot/status
     chmod 0444 /sys/kernel/debug/battery_debug/votables/iusb0_tot/status
     chmod 0444 /sys/kernel/debug/battery_debug/votables/fcc_tot/status
-    chmod 0664 /sys/class/qcom-battery/wireless_boost_en
 
     # charge_service
     start charge_service
