@@ -1,10 +1,11 @@
 # Audio
 ro.vendor.qti.va_odm.support=1
 
-persist.vendor.display.pcc_matrix=0.000000,0.000000,0.000000,0.000000,0.117647,0.235294
-
-persist.vendor.colorgamut.mode=1
+# Enable Color-Gamut
 persist.vendor.display.colorgamut.mode=1
 persist.vendor.display.sspp_color_mode=1
 persist.vendor.display.opec_mode=0
 vendor.display.hmd_mode=0
+
+# PCC matrix default values : pcc[0].R,pcc[0].G,pcc[0].B,pcc[1].R,pcc[1].G,pcc[1].B
+persist.vendor.display.pcc_matrix=0.000000,0.000000,0.000000,0.000000,0.117647,0.235294
