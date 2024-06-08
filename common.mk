@@ -8,6 +8,7 @@
 TARGET_BUILD_FULLY_SIGN := true
 
 # Add common definitions for Qualcomm
+TARGET_BOARD_PLATFORM := kalama
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
@@ -275,8 +276,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc \
@@ -547,10 +546,18 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    android.hardware.usb@1.3-service-qti \
+    android.hardware.usb.gadget@1.2-service-qti
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/usb/usb_compositions.conf:$(TARGET_COPY_OUT_VENDOR)/etc/usb_compositions.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
