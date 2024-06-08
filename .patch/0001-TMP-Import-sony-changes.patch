@@ -1,0 +1,72 @@
+From 1cab0156e89aea99f811b0e63dc9f61004f8bbaa Mon Sep 17 00:00:00 2001
+From: someone5678 <someone5678@users.noreply.github.com>
+Date: Sun, 9 Jun 2024 03:26:01 +0900
+Subject: [PATCH] [TMP] Import Sony changes
+
+Change-Id: Ic817dd23b04e93f166da457e59e56e1dd5540b74
+---
+ hal/UsbGadget.cpp | 41 ++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 38 insertions(+), 3 deletions(-)
+
+diff --git a/hal/UsbGadget.cpp b/hal/UsbGadget.cpp
+index d311bd0..1193264 100644
+--- a/hal/UsbGadget.cpp
++++ b/hal/UsbGadget.cpp
+@@ -107,9 +107,9 @@ UsbGadget::UsbGadget(const char* const gadget)
+   if (access(CONFIG_PATH, R_OK) != 0)
+     ALOGE("configfs setup not done yet");
+ 
+-  createCompositionsMap("/vendor/etc/usb_compositions.conf");
+-  createCompositionsMap("/odm/etc/usb_compositions.conf");
+-  createCompositionsMap("/product/etc/usb_compositions.conf");
++  // createCompositionsMap("/vendor/etc/usb_compositions.conf");
++  // createCompositionsMap("/odm/etc/usb_compositions.conf");
++  // createCompositionsMap("/product/etc/usb_compositions.conf");
+ }
+ 
+ Return<void> UsbGadget::getCurrentUsbFunctions(
+@@ -278,6 +278,41 @@ int UsbGadget::addFunctionsFromPropString(std::string prop, bool &ffsEnabled, in
+ 
+ static V1_0::Status validateAndSetVidPid(uint64_t functions) {
+   V1_0::Status ret = Status::SUCCESS;
++  switch (functions) {
++    case static_cast<uint64_t>(GadgetFunction::ADB):
++      ret = setVidPid("0x0FCE", "0x320d");
++      break;
++    case static_cast<uint64_t>(GadgetFunction::MTP):
++      ret = setVidPid("0x0FCE", "0x020d");
++      break;
++    case GadgetFunction::ADB | GadgetFunction::MTP:
++      ret = setVidPid("0x0FCE", "0x520d");
++      break;
++    case static_cast<uint64_t>(GadgetFunction::MIDI):
++      ret = setVidPid("0x0FCE", "0xc20d");
++      break;
++    case GadgetFunction::ADB | GadgetFunction::MIDI:
++      ret = setVidPid("0x0FCE", "0xd20d");
++      break;
++    case static_cast<uint64_t>(GadgetFunction::PTP):
++      ret = setVidPid("0x0FCE", "0xa20d");
++      break;
++    case GadgetFunction::ADB | GadgetFunction::PTP:
++      ret = setVidPid("0x0FCE", "0xb20d");
++      break;
++    case static_cast<uint64_t>(GadgetFunction::RNDIS):
++      ret = setVidPid("0x0FCE", "0x720d");
++      break;
++    case GadgetFunction::ADB | GadgetFunction::RNDIS:
++      ret = setVidPid("0x0FCE", "0x820d");
++      break;
++    default:
++      ret = Status::CONFIGURATION_NOT_SUPPORTED;
++  }
++  if (ret == Status::SUCCESS) {
++    return ret;
++  }
++
+   switch (functions) {
+     case static_cast<uint64_t>(GadgetFunction::ADB):
+       ret = setVidPid("0x18d1", "0x4e11");
+-- 
+2.39.2
+
