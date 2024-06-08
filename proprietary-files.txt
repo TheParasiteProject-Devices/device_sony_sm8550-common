@@ -512,6 +512,8 @@ vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
+vendor/bin/sigma_dut
+vendor/bin/TrustedUISampleTest
 vendor/etc/clstc_config_library.xml
 vendor/etc/disp_color_conf.xml
 vendor/etc/disp_panel_conf.xml

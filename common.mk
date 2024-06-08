@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libsdmcore \
     libsdmutils \
+    libqdutils \
     vendor.display.config@1.0 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
@@ -476,7 +477,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/sony \
     kernel/sony/sm8550 \
-    kernel/sony/sm8550-modules
+    kernel/sony/sm8550-modules \
+    vendor/qcom/opensource/commonsys/display \
+    vendor/qcom/opensource/commonsys-intf/display
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -610,3 +613,8 @@ $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
 
 # Extra
 $(call inherit-product, device/sony/extra/extra.mk)
+
+# Qcom commonsys
+$(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
