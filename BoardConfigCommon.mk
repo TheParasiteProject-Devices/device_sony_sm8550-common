@@ -32,7 +32,7 @@ BOARD_VENDOR := sony
 COMMON_PATH := device/sony/sm8550-common
 
 TARGET_BUILD_FULLY_SIGN := true
-include vendor/parasite-signatures/BoardConfigSign.mk
+include vendor/parasite/signatures/BoardConfigSign.mk
 
 # A/B
 AB_OTA_UPDATER := true
