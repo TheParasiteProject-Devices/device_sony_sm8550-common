@@ -272,6 +272,7 @@ ro.build.shutdown_timeout=0
 persist.vendor.sensors.debug.hal=0
 
 # USB
+ro.usb.uvc.enabled=true
 vendor.usb.controller=a600000.dwc3
 vendor.usb.diag.func.name=ffs
 vendor.usb.dpl.inst.name=dpl
