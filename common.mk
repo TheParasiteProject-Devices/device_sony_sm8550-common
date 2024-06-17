@@ -610,6 +610,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
+# Blur
+TARGET_ENABLE_BLUR := true
+
 # XperiaModules
 $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
 
