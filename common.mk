@@ -39,6 +39,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
+    libaudioroute.vendor \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
@@ -60,7 +61,8 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libtinycompress \
     libvolumelistener \
-    sound_trigger.primary.kalama
+    sound_trigger.primary.kalama \
+    libprocessgroup.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
@@ -322,7 +324,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
-    libpalclient
+    libpalclient \
+    libstagefright_softomx_plugin.vendor
 
 # Memtrack
 PRODUCT_PACKAGES += \
