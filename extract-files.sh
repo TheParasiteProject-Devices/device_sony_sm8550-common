@@ -69,6 +69,9 @@ function blob_fixup() {
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
+        vendor/etc/seccomp_policy/qwesd@2.0.policy)
+            echo "pipe2: 1" >> "${2}"
+            ;;
     esac
 }
 
