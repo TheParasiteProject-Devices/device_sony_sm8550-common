@@ -5,8 +5,6 @@ aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 audio.offload.video=true
 audio.deep_buffer.media=true
-audio.sys.noisy.broadcast.delay=600
-audio.sys.offload.pstimeout.secs=3
 persist.audio.fluence.speaker=true
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicecomm=true
@@ -28,8 +26,6 @@ persist.vendor.audio.ras.enabled=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 ro.af.client_heap_size_kbyte=7168
 ro.audio.flinger_standbytime_ms=2000
-ro.qc.sdk.audio.fluencetype=none
-ro.qc.sdk.audio.ssr=false
 ro.vendor.audio.frame_count_needed_constant=16384
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
@@ -202,7 +198,6 @@ persist.sys.fuse.passthrough.enable=true
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=16666666
 debug.sf.early.sf.duration=15666666
 debug.sf.earlyGl.app.duration=16666666
@@ -266,8 +261,6 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.oem_socket=true
 persist.vendor.radio.enableadvancedscan=true
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-ril.subscription.types=NV,RUIM
 
 # Sensor
 vendor.dynamic_sensor.setup.timeout.ms=1600
