@@ -486,6 +486,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/sony \
+    hardware/sony/libidd \
     kernel/sony/sm8550 \
     kernel/sony/sm8550-modules
 
@@ -623,6 +624,10 @@ PRODUCT_COPY_FILES += \
 
 # Blur
 TARGET_ENABLE_BLUR := true
+
+# In Device Diagnostics (Dummy)
+PRODUCT_PACKAGES += \
+    libidd
 
 # XperiaModules
 $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
