@@ -358,7 +358,8 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/sony
+    hardware/sony \
+    hardware/sony/libidd
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -488,6 +489,10 @@ PRODUCT_PACKAGES += \
 
 # Blur
 TARGET_ENABLE_BLUR := true
+
+# In Device Diagnostics (Dummy)
+PRODUCT_PACKAGES += \
+    libidd
 
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
