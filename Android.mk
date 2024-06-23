@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -29,17 +29,5 @@ $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
-
-WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
-$(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wifi firmware symlinks: $@"
-	@mkdir -p $@/wlan/qca_cld/kiwi_v2
-	@mkdir -p $@/kiwi
-	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
-	$(hide) ln -sf /mnt/vendor/persist/wlan_mac.bin $@/wlan/qca_cld/kiwi_v2/wlan_mac.bin
-	$(hide) ln -sf /mnt/vendor/persist/wifi/kiwi_v2/WCNSS_qcom_cfg.ini $@/wlan/qca_cld/kiwi_v2/WCNSS_qcom_cfg.ini
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-    $(WIFI_FIRMWARE_SYMLINKS)
 
 endif
