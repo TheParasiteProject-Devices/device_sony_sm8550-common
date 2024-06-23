@@ -10,6 +10,17 @@ TARGET_BUILD_FULLY_SIGN := true
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# MSM
+# WIFI FIRMWARE symlinks
+PRODUCT_PACKAGES += \
+    wifi_firmware_bdwlan_e17_symlink \
+    wifi_firmware_bdwlan_e30_symlink \
+    wifi_firmware_bdwlan_e31_symlink \
+    wifi_firmware_kiwi_regdb_symlink \
+    wifi_firmware_wlan_qca_cld_kiwi_v2_WCNSS_qcom_cfg_symlink \
+    wifi_firmware_wlan_qca_cld_kiwi_v2_wlan_mac_symlink \
+    wifi_firmware_wlanmdsp_otaupdate_symlink
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
