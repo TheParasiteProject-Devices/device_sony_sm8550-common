@@ -777,20 +777,7 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IDD
-vendor/bin/hw/vendor.semc.system.idd@1.1-service
-vendor/bin/iddd
-vendor/etc/init/init.sony.idd.rc
-vendor/etc/init/vendor.semc.system.idd@1.1-service.rc
-vendor/etc/security/idd_config.pem
-vendor/etc/security/idd_report.pem
-vendor/etc/idd.fstab
-vendor/etc/iddd_user.conf
-vendor/lib/libidd.so
-vendor/lib/vendor.semc.system.idd@1.0.so
-vendor/lib64/libidd.so
 vendor/lib64/libprotobuf-c-idd.so
-vendor/lib64/vendor.semc.system.idd@1.0.so
-vendor/lib64/vendor.semc.system.idd@1.1.so
 
 # IMS
 system_ext/app/ImsRcsService/ImsRcsService.apk
