@@ -439,6 +439,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
+    libsysutils.vendor \
+    libusbhost.vendor \
     libxml2
 
 # Sensors
@@ -616,6 +618,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
