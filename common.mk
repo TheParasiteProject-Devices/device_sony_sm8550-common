@@ -358,7 +358,8 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     libOmxCore \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
