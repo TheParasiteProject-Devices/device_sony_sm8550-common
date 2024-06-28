@@ -1,3 +1,0 @@
-set_prop(vendor_init, audio_prop);
-
-get_prop(vendor_init, powerctl_prop);
