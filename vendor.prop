@@ -265,9 +265,6 @@ persist.vendor.radio.enableadvancedscan=true
 # Sensor
 vendor.dynamic_sensor.setup.timeout.ms=1600
 
-# shutdown
-ro.build.shutdown_timeout=0
-
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
