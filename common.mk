@@ -497,6 +497,11 @@ PRODUCT_SOONG_NAMESPACES += \
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Sound Dose
+PRODUCT_PACKAGES += \
+    android.hardware.audio.sounddose-vendor-impl \
+    audio_sounddose_aoc
+
 # Telephony
 PRODUCT_PACKAGES += \
     SonyEuicc \
