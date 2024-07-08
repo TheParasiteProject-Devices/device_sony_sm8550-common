@@ -148,6 +148,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml
 
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0 \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
