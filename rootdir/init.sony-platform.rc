@@ -242,5 +242,5 @@ on property:vendor.smartstamina.touchreport=0
     write /sys/devices/virtual/input/lxs_ts_input/frame_rate_np "0 2"
 
 # create directory for wfd
-on post-fs-data && property:ro.build.type=userdebug
+on post-fs-data
     mkdir /data/vendor/wfd 0777 system system
