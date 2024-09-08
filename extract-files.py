@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.utils import run_cmd
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -143,6 +145,19 @@ blob_fixups: blob_fixups_user_type = {
         rb'persist\.vendor\.radio\.poweron_opt',
         b'persist.vendor.radio.poweron_ign',
     ),
+    (
+        'vendor/lib64/libdlbdsservice.so',
+        'vendor/lib64/libdlbpreg.so',
+        'vendor/lib64/libstagefright_soft_ac4dec.so',
+        'vendor/lib64/libstagefright_soft_ddpdec.so',
+        'vendor/lib64/libstagefrightdolby.so',
+        'vendor/lib64/soundfx/libdlbvol.so',
+        'vendor/lib64/soundfx/libswdap.so',
+    ): blob_fixup()
+    .replace_needed(
+        'libstagefright_foundation.so', 'libstagefright_foundation-v33.so'
+    ),
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
