@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.utils import run_cmd
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -133,7 +135,19 @@ blob_fixups: blob_fixups_user_type = {
     # > 00009690: 2564 0073 5f61 7070 5f73 746f 7000 2573  %d.s_app_stop.%s
     'vendor/bin/thermal-engine-v2': blob_fixup()
     .binary_regex_replace(b'thermal-cpufreq-%d\x00s_app_stop\x00%s',
-                          b'cpufreq-cpu%d\x00\x00\x00\x00\x00\x00s_app_stop\x00%s')
+                          b'cpufreq-cpu%d\x00\x00\x00\x00\x00\x00s_app_stop\x00%s'),
+    (
+        'vendor/lib64/libdlbdsservice.so',
+        'vendor/lib64/libdlbpreg.so',
+        'vendor/lib64/libstagefright_soft_ac4dec.so',
+        'vendor/lib64/libstagefright_soft_ddpdec.so',
+        'vendor/lib64/libstagefrightdolby.so',
+        'vendor/lib64/soundfx/libdlbvol.so',
+        'vendor/lib64/soundfx/libswdap.so',
+    ): blob_fixup()
+    .replace_needed(
+        'libstagefright_foundation.so', 'libstagefright_foundation-v33.so'
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

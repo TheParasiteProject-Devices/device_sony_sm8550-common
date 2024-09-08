@@ -331,6 +331,21 @@ PRODUCT_PACKAGES += \
     libpalclient \
     libstagefright_softomx_plugin.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor
+
+# Media (Dolby)
+PRODUCT_PACKAGES += \
+    LineageDolby \
+    SonyYodoLineageDolbyResCommon
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
 # Memtrack
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
