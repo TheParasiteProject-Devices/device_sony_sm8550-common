@@ -161,6 +161,10 @@ blob_fixups: blob_fixups_user_type = {
     .replace_needed(
         'libstagefright_foundation.so', 'libstagefright_foundation-v33.so'
     ),
+    'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
+    .add_line_if_missing(
+        'setsockopt: 1'
+    ),
 
 }  # fmt: skip
 
