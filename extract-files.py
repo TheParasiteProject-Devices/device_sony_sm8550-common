@@ -87,6 +87,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/qwesd@2.0.policy': blob_fixup()
     .add_line_if_missing(
         'pipe2: 1'
+    ).add_line_if_missing(
+        'gettid: 1'
     ),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
     .replace_needed(
@@ -95,6 +97,13 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so': blob_fixup()
     .replace_needed(
         'android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'
+    ),
+    (
+        'vendor/etc/seccomp_policy/atfwd@2.0.policy',
+        'vendor/etc/seccomp_policy/wfdhdcphalservice.policy',
+    ): blob_fixup()
+    .add_line_if_missing(
+        'gettid: 1'
     ),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
     .add_needed(
