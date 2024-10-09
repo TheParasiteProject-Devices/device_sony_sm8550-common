@@ -927,8 +927,6 @@ vendor/etc/public.libraries.txt
 
 # Neural networks
 odm/lib64/qnn/libQnnHtp.so;MODULE_SUFFIX=_odm
-odm/lib64/qnn/libQnnHtpV73.so:odm/lib/qnn/libQnnHtpV73.so
-odm/lib64/qnn/libQnnHtpV73Skel.so:odm/lib/qnn/libQnnHtpV73Skel.so
 odm/lib64/qnn/libQnnHtpV73Stub.so;MODULE_SUFFIX=_odm
 vendor/lib64/libQnnCpu.so
 vendor/lib64/libQnnHtp.so
