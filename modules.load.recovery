@@ -259,3 +259,4 @@ q6_notifier_dlkm.ko
 q6_pdr_dlkm.ko
 adsp_loader_dlkm.ko
 qti_battery_charger.ko
+leds-qpnp-flash-common.ko
