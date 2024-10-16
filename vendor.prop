@@ -32,6 +32,7 @@ ro.vendor.audio.sdk.ssr=false
 vendor.audio.c2.preferred=true
 vendor.audio.compress_capture.aac=true
 vendor.audio.compress_capture.enabled=true
+vendor.audio.3rd_mic_attached=true
 vendor.audio_hal.period_size=192
 vendor.audio.tunnel.encode=false
 vendor.audio.offload.buffer.size.kb=256
