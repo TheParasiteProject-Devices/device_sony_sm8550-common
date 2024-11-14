@@ -637,6 +637,10 @@ PRODUCT_PACKAGES += \
 # XperiaModules
 $(call inherit-product-if-exists, hardware/sony/XperiaModules.mk)
 
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
+
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
 
