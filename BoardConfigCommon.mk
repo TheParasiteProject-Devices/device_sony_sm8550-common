@@ -266,6 +266,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/sony/sepolicy/qti/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include packages/apps/KProfiles/sepolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
