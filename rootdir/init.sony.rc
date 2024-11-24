@@ -73,6 +73,7 @@ on property:ro.vendor.ltalabel.model=XQ-BQ42
 
 on property:ro.vendor.ltalabel.model=XQ-DQ44
     setprop ro.vendor.product.rf.id pdx234-J4
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on property:ro.vendor.ltalabel.model=XQ-DQ54
     setprop ro.vendor.product.rf.id pdx234-A4
@@ -85,6 +86,7 @@ on property:ro.vendor.ltalabel.model=XQ-DQ72
 
 on property:ro.vendor.ltalabel.model=XQ-DE44
     setprop ro.vendor.product.rf.id pdx237-J4
+    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
 
 on property:ro.vendor.ltalabel.model=XQ-DE54
     setprop ro.vendor.product.rf.id pdx237-A4
