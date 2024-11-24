@@ -94,14 +94,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             echo "pipe2: 1" >> "${2}"
             ;;
-        vendor/etc/libnfc-nci.conf)
+        vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so)
             [ "$2" = "" ] && return 0
-            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
-            ;;
-        vendor/etc/libnfc-nxp.conf)
-            [ "$2" = "" ] && return 0
-            sed -i "/NXPLOG_\w\+_LOGLEVEL/ s/0x03/0x02/" "${2}"
-            sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
             ;;
         *)
             return 1
