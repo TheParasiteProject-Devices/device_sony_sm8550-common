@@ -83,6 +83,15 @@ on property:ro.vendor.ltalabel.model=XQ-DQ62
 on property:ro.vendor.ltalabel.model=XQ-DQ72
     setprop ro.vendor.product.rf.id pdx234-C2
 
+on property:ro.vendor.ltalabel.model=XQ-DE44
+    setprop ro.vendor.product.rf.id pdx237-J4
+
+on property:ro.vendor.ltalabel.model=XQ-DE54
+    setprop ro.vendor.product.rf.id pdx237-A4
+
+on property:ro.vendor.ltalabel.model=XQ-DE72
+    setprop ro.vendor.product.rf.id pdx237-C2
+
 # USB config, refer to init.sony.usb.rc
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x0FCE
