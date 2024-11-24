@@ -87,6 +87,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             echo "pipe2: 1" >> "${2}"
             ;;
+        vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.light-V1-ndk_platform.so" "android.hardware.light-V1-ndk.so" "${2}"
+            ;;
         system_ext/lib64/libwfdservice.so)
             [ "$2" = "" ] && return 0
             sed -i "s/android.media.audio.common.types-V2-cpp.so/android.media.audio.common.types-V3-cpp.so/" "${2}"
