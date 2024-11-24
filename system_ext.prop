@@ -1,6 +1,10 @@
 # Audio
+audio.spatializer.effect.util_clamp_min=300
 ro.audio.spatializer_enabled=true
+ro.audio.headtracking_enabled=true
 ro.audio.monitorRotation=true
+ro.audio.spatializer_transaural_enabled_default=false
+persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
