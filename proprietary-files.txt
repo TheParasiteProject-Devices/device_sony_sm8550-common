@@ -322,6 +322,7 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
 
 # Camera
+vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/vendor.somc.hardware.videoeffect-V1-impl.so
 vendor/lib64/vendor.somc.hardware.videoeffect-V1-ndk_platform.so
