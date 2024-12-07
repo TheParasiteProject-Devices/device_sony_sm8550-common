@@ -100,7 +100,7 @@ blob_fixups: blob_fixups_user_type = {
     ),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
     .replace_needed(
-        'android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'
+        'android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'
     ),
     'vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so': blob_fixup()
     .replace_needed(
