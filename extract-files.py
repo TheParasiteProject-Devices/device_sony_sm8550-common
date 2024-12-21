@@ -24,6 +24,7 @@ namespace_imports = [
     'hardware/sony',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/dataservices',
     'vendor/sony/sm8550-common',
 ]
