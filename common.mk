@@ -8,6 +8,7 @@
 TARGET_BUILD_FULLY_SIGN := true
 
 # Add common definitions for Qualcomm
+BOARD_USES_QCOM_HARDWARE := true
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
