@@ -516,6 +516,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
+# QTI compat
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/compat_framework_overrides.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/appcompat/compat_framework_overrides.xml
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
