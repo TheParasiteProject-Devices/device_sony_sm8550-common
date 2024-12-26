@@ -1,11 +1,13 @@
 cc_library_static {
     name: "libperfmgr-ext-sony-sm8550",
     vendor: true,
+    defaults: [
+        "android.hardware.power-ndk_shared",
+    ],
     srcs: [
         "power-mode.cpp",
     ],
     shared_libs: [
-        "android.hardware.power-ndk_shared",
         "libbase",
     ],
 }
