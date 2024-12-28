@@ -644,6 +644,3 @@ PRODUCT_PACKAGES += \
 
 # Inherit from proprietary files makefile
 $(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)
-
-# Extra
-$(call inherit-product, device/sony/extra/extra.mk)
