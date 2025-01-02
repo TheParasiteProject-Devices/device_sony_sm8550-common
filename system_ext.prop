@@ -1,3 +1,6 @@
+# Audio
+ro.audio.spatializer_enabled=true
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
