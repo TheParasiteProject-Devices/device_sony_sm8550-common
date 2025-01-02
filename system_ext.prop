@@ -1,5 +1,6 @@
 # Audio
 ro.audio.spatializer_enabled=true
+ro.audio.monitorRotation=true
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
