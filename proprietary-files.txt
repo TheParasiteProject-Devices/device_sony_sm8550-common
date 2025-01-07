@@ -1,4 +1,4 @@
-# Stock package version: XQ-DQ72_Customized_SEA_67.1.A.2.307
+# Stock package version: XQ-DQ72_Customized_SEA_67.2.A.2.41
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -550,6 +550,7 @@ vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so
 vendor/lib64/libfastcvdsp_stub.so
 
 # FM
+system/lib64/vendor.qti.hardware.fm-V1-ndk.so
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -691,22 +692,27 @@ vendor/lib64/vendor.semc.system.idd@1.0.so
 vendor/lib64/vendor.semc.system.idd@1.1.so
 
 # IMS
+system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcssipaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -1012,6 +1018,7 @@ system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
 system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 vendor/bin/qcc-vendor
 vendor/etc/init/init.qccvendor.rc
@@ -1164,6 +1171,7 @@ vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/librilqmimiscservices.so
+vendor/lib64/libspc_vendor.so
 vendor/lib64/qcrilInterfaces.so
 vendor/lib64/qcrilMarshal.so
 vendor/lib64/qcrilNrQmiModule.so
@@ -1212,6 +1220,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+vendor/lib64/vendor.semc.hardware.spc-V1-ndk_platform.so
 vendor/lib64/vendor.somc.hardware.radio@1.0.so
 vendor/lib64/vendor.somc.hardware.aidlradio-V1-ndk.so
 
@@ -1267,12 +1276,16 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
+# SPC service
+vendor/bin/hw/vendor.semc.hardware.spc-service
+vendor/etc/init/vendor.semc.hardware.spc-service.rc
+
 # SSR
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
 # Secd
-system/lib64/libMiscTaWrapper.so:vendor/lib64/libMiscTaWrapper.so
+system_ext/lib64/libMiscTaWrapper.so:vendor/lib64/libMiscTaWrapper.so
 system_ext/etc/permissions/jp.co.sony.mc.misctasdklibrary.xml
 system_ext/framework/jp.co.sony.mc.misctasdklibrary.jar
 vendor/bin/hw/vendor.semc.hardware.secd@1.1-service
@@ -1423,14 +1436,13 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal engine
-vendor/bin/thermal-engine-v2|b60f5ed4b79da2091970d24f97074ce2b619969b
+vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/lib64/liblights-core.so
 vendor/lib64/liblmthermallistner.so
 vendor/lib64/libsys-utils.so
 vendor/lib64/libthermal_engine.so
 vendor/lib64/libthermalclient.so
-vendor/lib64/vendor.semc.hardware.thermal@1.0.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
@@ -1530,6 +1542,7 @@ system_ext/lib64/libwfduibcsink.so
 system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice

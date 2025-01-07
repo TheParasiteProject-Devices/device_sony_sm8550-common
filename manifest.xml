@@ -480,4 +480,8 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.spc</name>
+        <fqname>ISpc/default</fqname>
+    </hal>
 </manifest>
