@@ -563,7 +563,6 @@ vendor/lib64/lib_bix_idd.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/libets_teeclient_v2.so
 vendor/lib64/libree_bix_agent.so
-vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 vendor/lib64/vendor.semc.hardware.fingerprint-V1-ndk_platform.so
 
 # Fingerprint firmware
