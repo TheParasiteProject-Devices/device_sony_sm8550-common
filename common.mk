@@ -338,6 +338,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor
 
+# RIL
+PRODUCT_PACKAGES += \
+    libsysutils.vendor \
+    libusbhost.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
