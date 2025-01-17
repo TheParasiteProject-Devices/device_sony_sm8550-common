@@ -374,7 +374,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
-    SonyEuicc \
+    LineageEuicc \
+    LineageEuiccResSonyCommon \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
