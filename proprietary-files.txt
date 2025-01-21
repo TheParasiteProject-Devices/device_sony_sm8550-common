@@ -1439,6 +1439,8 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Trimarea
+odm/bin/taimport_vendor
+odm/etc/init/taimport_vendor.rc
 vendor/lib64/libintegration.so
 vendor/lib64/libtpm.so
 
