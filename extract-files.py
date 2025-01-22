@@ -157,6 +157,11 @@ blob_fixups: blob_fixups_user_type = {
     .replace_needed(
         'libstagefright_foundation.so', 'libstagefright_foundation-v33.so'
     ),
+    'vendor/etc/wfdconfig.xml': blob_fixup()
+        .regex_replace('<M4Enable>0</M4Enable>', '<M4Enable>1</M4Enable>')
+        .regex_replace('<UIBCValid>0</UIBCValid>', '<UIBCValid>1</UIBCValid>')
+        .regex_replace('<USB>1</USB>', '<USB>3</USB>'
+    ),
 
 }  # fmt: skip
 
