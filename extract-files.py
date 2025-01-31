@@ -130,7 +130,14 @@ blob_fixups: blob_fixups_user_type = {
     # > 00009690: 2564 0073 5f61 7070 5f73 746f 7000 2573  %d.s_app_stop.%s
     'vendor/bin/thermal-engine-v2': blob_fixup()
     .binary_regex_replace(b'thermal-cpufreq-%d\x00s_app_stop\x00%s',
-                          b'cpufreq-cpu%d\x00\x00\x00\x00\x00\x00s_app_stop\x00%s')
+                          b'cpufreq-cpu%d\x00\x00\x00\x00\x00\x00s_app_stop\x00%s'),
+    (
+        'vendor/lib64/libqcrilNr.so',
+        'vendor/lib64/libril-db.so',
+    ): blob_fixup().binary_regex_replace(
+        rb'persist\.vendor\.radio\.poweron_opt',
+        b'persist.vendor.radio.poweron_ign',
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
