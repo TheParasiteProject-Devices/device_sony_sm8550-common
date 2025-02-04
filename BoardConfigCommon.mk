@@ -243,7 +243,9 @@ BOARD_EROFS_PCLUSTER_SIZE := 262144
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(COMMON_PATH):libperfmgr-ext-sony-sm8550
 
 # PowerShare
-$(call soong_config_set, SONY_POWERSHARE, WIRELESS_TX_ENABLE_PATH, /sys/class/qcom-battery/wireless_boost_en)
+TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/wireless_boost_en
+TARGET_POWERSHARE_ENABLED := 1
+TARGET_POWERSHARE_DISABLE := 0
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
