@@ -382,7 +382,7 @@ PRODUCT_COPY_FILES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.sony
+    vendor.lineage.powershare@1.0-service.default
 
 # Public libraries
 PRODUCT_COPY_FILES += \
