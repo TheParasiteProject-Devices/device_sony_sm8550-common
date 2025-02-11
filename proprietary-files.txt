@@ -556,15 +556,11 @@ system_ext/lib64/libfm-hci.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-rbs.rc
-vendor/etc/vintf/manifest/vendor.egistec.hardware.fingerprint.xml
-vendor/lib64/hw/bix.fingerprint.default.so
+vendor/lib64/hw/bix.fingerprint.default.so:vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
 vendor/lib64/lib_bix_idd.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/libets_teeclient_v2.so
 vendor/lib64/libree_bix_agent.so
-vendor/lib64/vendor.semc.hardware.fingerprint-V1-ndk_platform.so
 
 # Fingerprint firmware
 vendor/firmware/egisap.mbn
