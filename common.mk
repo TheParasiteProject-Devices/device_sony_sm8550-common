@@ -423,8 +423,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
-    libxml2 \
-    sim-restart
+    libxml2
 
 # Sensors
 PRODUCT_PACKAGES += \
