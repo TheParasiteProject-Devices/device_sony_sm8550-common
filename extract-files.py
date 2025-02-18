@@ -139,13 +139,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/fingerprint.default.so': blob_fixup()
     .binary_regex_replace(b'bix.fingerprint', b'fingerprint\x00\x00\x00\x00'),
     (
-        'vendor/lib64/libqcrilNr.so',
-        'vendor/lib64/libril-db.so',
-    ): blob_fixup().binary_regex_replace(
-        rb'persist\.vendor\.radio\.poweron_opt',
-        b'persist.vendor.radio.poweron_ign',
-    ),
-    (
         'vendor/lib64/libdlbdsservice.so',
         'vendor/lib64/libdlbpreg.so',
         'vendor/lib64/libstagefright_soft_ac4dec.so',
