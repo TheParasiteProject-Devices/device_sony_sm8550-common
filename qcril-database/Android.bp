@@ -32,6 +32,7 @@ filegroup {
         "//vendor/sony/sm8550-common:10.0_config.sql",
         "//vendor/sony/sm8550-common:11.0_config.sql",
         "//vendor/sony/sm8550-common:12.0_config.sql",
+        "config/12.1_config.sql",
     ],
 }
 
@@ -77,5 +78,6 @@ prebuilt_etc {
         "10.0_config.sql",
         "11.0_config.sql",
         "12.0_config.sql",
+        "12.1_config.sql",
     ],
 }
