@@ -524,6 +524,9 @@ PRODUCT_PACKAGES += \
     QtiTelephonyCompat \
     telephony-ext
 
+PRODUCT_PACKAGES += \
+    qcrilNrDb_vendor
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
