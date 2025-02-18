@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "12.1_config.sql",
+    src: "12.1_config.sql",
+    relative_install_path: "qcril_database/upgrade/config",
+    vendor: true,
+}
