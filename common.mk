@@ -133,6 +133,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml
 
+$(call soong_config_set,camera,libcameraservice_ext_lib,//$(LOCAL_PATH):libcameraservice-ext-sony-sm8550)
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
