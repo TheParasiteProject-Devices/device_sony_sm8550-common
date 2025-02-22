@@ -138,6 +138,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
+    'vendor/etc/wfdconfig.xml': blob_fixup()
+        .regex_replace('<M4Enable>0</M4Enable>', '<M4Enable>1</M4Enable>')
+        .regex_replace('<UIBCValid>0</UIBCValid>', '<UIBCValid>1</UIBCValid>')
+        .regex_replace('<USB>1</USB>', '<USB>3</USB>'),
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
