@@ -115,6 +115,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libutils.product \
     libutils.vendor
 
 PRODUCT_COPY_FILES += \
