@@ -140,6 +140,10 @@ blob_fixups: blob_fixups_user_type = {
         rb'persist\.vendor\.radio\.poweron_opt',
         b'persist.vendor.radio.poweron_ign',
     ),
+    'vendor/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
+    .add_needed(
+        'libbase_shim.so'
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
