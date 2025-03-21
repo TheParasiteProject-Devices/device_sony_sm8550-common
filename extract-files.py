@@ -164,6 +164,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('<instance>default</instance>',
                        '<instance>default</instance>\n            <instance>dolby</instance>'
     ),
+    'vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy': blob_fixup()
+        .add_line_if_missing('sched_get_priority_min: 1')
+        .add_line_if_missing('sched_get_priority_max: 1'
+    ),
 
 }  # fmt: skip
 
