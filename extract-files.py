@@ -87,6 +87,10 @@ blob_fixups: blob_fixups_user_type = {
     ).add_line_if_missing(
         'gettid: 1'
     ),
+    'system_ext/bin/wfdservice64': blob_fixup()
+    .add_needed(
+        'libwfdservice_shim.so'
+    ),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
     .add_needed(
         'libgui_shim.so'
