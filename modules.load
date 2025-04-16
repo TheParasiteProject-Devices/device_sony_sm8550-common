@@ -234,3 +234,4 @@ sony_camera.ko
 camera_sync.ko
 msm_kgsl.ko
 kprofiles.ko
+fastchg.ko
