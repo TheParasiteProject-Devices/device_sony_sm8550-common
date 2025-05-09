@@ -6,6 +6,7 @@ ro.config.vc_call_vol_default=4
 
 # Bluetooth
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxtws-aptxhd-ldac
 
 # Display
 vendor.display.disable_rounded_corner=1
