@@ -300,6 +300,7 @@ PRODUCT_PACKAGES += \
     SimDualResCommon \
     SimSingleResCommon \
     NcmTetheringOverlay \
+    SonyYodoBtHelperResCommon \
     SonyYodoDeviceAsWebcamResCommon \
     SonyYodoFrameworksResCommon \
     SonyYodoSettingsProviderOverlayCommon \
