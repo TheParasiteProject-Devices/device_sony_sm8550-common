@@ -1235,6 +1235,10 @@ uint32_t Vibrator::intensityToVolLevel(float intensity, uint32_t effectIndex) {
         case WAVEFORM_LIGHT_TICK_INDEX:
             volLevel = calc(intensity, mTickEffectVol);
             break;
+        case WAVEFORM_LONG_VIBRATION_EFFECT_INDEX:
+            // fall-through
+        case WAVEFORM_SHORT_VIBRATION_EFFECT_INDEX:
+            // fall-through
         case WAVEFORM_QUICK_RISE_INDEX:
             // fall-through
         case WAVEFORM_QUICK_FALL_INDEX:
@@ -1247,6 +1251,8 @@ uint32_t Vibrator::intensityToVolLevel(float intensity, uint32_t effectIndex) {
         case WAVEFORM_SPIN_INDEX:
             // fall-through
         case WAVEFORM_SLOW_RISE_INDEX:
+            // fall-through
+        case WAVEFORM_LOW_TICK_INDEX:
             // fall-through
         default:
             volLevel = calc(intensity, mClickEffectVol);
