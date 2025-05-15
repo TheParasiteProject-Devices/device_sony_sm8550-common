@@ -5,4 +5,8 @@
 -->
 <resources>
     <bool name="dolby_uses_port_based_tuning">true</bool>
+
+    <!-- Whether overriding HDR types is required for Dolby Vision support -->
+    <bool name="dolby_vision_overrides_hdr_types">true</bool>
+
 </resources>

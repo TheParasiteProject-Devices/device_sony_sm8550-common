@@ -1604,3 +1604,18 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8956937951c6f99727ace3380f46275e62
 
 # Audio (Spatial Audio) - from cheetah-user-15-BP1A.250505.005.B1-13277630-release-keys
 vendor/lib64/soundfx/libspatialaudio.so|bb09a1d58c46493e0c4ab7feb820cad443c05974
+
+# Media (Dolby) - from Redmi
+vendor/bin/hw/dolbycodec2|4f71ccb10e61df8bc199d319be57ddc480789c29
+vendor/etc/dolby_vision.cfg|3b0ad1711286d842776951ca46c6c5bf4fe94e53
+vendor/etc/init/vendor.dolbyvision.media.c2@1.0-service.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
+vendor/lib64/c2.dolby.avc.dec.so|363ee490eca3f2190f8ae7f9c684cfad695bcd98
+vendor/lib64/c2.dolby.avc.sec.dec.so|4c37b3839e29f11f7bf268528835a64cbcaf46a2
+vendor/lib64/c2.dolby.client.so|afdeb2e9fa5d27088c3777bb315e9b959d6e9b5f
+vendor/lib64/c2.dolby.egl.so|11843f482039be68f002575585730f4369ac906c
+vendor/lib64/c2.dolby.hevc.dec.so|544239c0bbb8402626dde6540c6f5b8e11e7e0d1
+vendor/lib64/c2.dolby.hevc.enc.so|8e12f410be76ed42cdfd2cad132d6b42750d20a2
+vendor/lib64/c2.dolby.hevc.sec.dec.so|be8b156e6ba0ec97c7da04044ffabb5959e6a510
+vendor/lib64/c2.dolby.store.so|184bcadc12a2aee363d086490fdfb6c5271ac10e
+vendor/lib64/libdolbyottcameracontrol.so|8cd61fa1d09464710d570e66ee466567d6fb9060
+vendor/lib64/libdolbyvision.so|83c56a3c8c20d2ab04742f8ab82629a24a0e9774
