@@ -337,6 +337,10 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_DEEP_BUFFER</name>
+                <custom-config key="camcorder_landscape">
+                    <channels>4</channels>
+                    <snd_device_name>handset-stereo-dmic-ef</snd_device_name>
+                </custom-config>
                 <ec_enable>1</ec_enable>
                 <custom-config key="sony-speaker-mic-camcorder-mono">
                     <channels>1</channels>
