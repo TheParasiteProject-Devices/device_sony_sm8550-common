@@ -147,7 +147,7 @@ TARGET_KERNEL_EXT_MODULES := \
     semc/hardware/camera-kernel-module/sony_camera \
     semc/hardware/charge/kernel-modules/battchg_ext \
     semc/hardware/charge/kernel-modules/battman_dbg \
-    semc/hardware/kernel-modules/misc/et6xx \
+    semc/hardware/fingerprint/kernel-modules/egis/et6xx \
     semc/hardware/kernel-modules/misc/ldo_vibrator \
     semc/hardware/kernel-modules/msm/lxs_ts
 
