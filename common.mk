@@ -336,6 +336,10 @@ $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-batte
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# QSPA
+PRODUCT_PACKAGES += \
+    vendor.qti.qspa-service
+
 # QMI
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor
