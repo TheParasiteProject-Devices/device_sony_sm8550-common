@@ -26,6 +26,8 @@ debug.sf.disable_client_composition_cache=0
 ro.hwui.render_ahead=10
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+debug.hwui.renderer=skiavk
+debug.renderengine.backend=skiavkthreaded
 
 # DPM
 persist.vendor.dpm.feature=11
