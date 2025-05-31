@@ -7,6 +7,8 @@
 # Signing build
 TARGET_BUILD_FULLY_SIGN := true
 
+COMMON_PATH := device/sony/sm8550-common
+
 # Add common definitions for Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
@@ -466,6 +468,18 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+# VINTF
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/sony/vintf/device_framework_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
+DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += \
+    $(COMMON_PATH)/manifest.xml \
+    $(COMMON_PATH)/network_manifest.xml \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
+    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
