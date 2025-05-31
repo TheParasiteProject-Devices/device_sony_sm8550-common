@@ -172,3 +172,4 @@ wcd_core_dlkm.ko
 wlan_firmware_service.ko
 wsa883x_dlkm.ko
 wsa884x_dlkm.ko
+kprofiles.ko
