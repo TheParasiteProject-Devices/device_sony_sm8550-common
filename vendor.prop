@@ -103,6 +103,7 @@ vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.dmabuf.cma.memory.enable=false
 vendor.audio.hdr.record.enable=false
 vendor.audio.enable.cirrus.speaker=true
+vendor.audio.c2.preferred=true
 vendor.voice.path.for.pcm.voip=true
 vendor.qc2audio.suspend.enabled=true
 vendor.qc2audio.per_frame.flac.dec.enabled=true
