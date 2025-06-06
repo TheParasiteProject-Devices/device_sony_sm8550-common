@@ -1,4 +1,4 @@
-on boot
+on early-boot
     wait /sys/class/leds/cs40l25:vibrator/device
 
     mkdir /mnt/vendor/persist/haptics 0770 system system
