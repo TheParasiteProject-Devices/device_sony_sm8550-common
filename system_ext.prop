@@ -5,6 +5,7 @@ ro.audio.headtracking_enabled=true
 ro.audio.monitorRotation=true
 ro.audio.spatializer_transaural_enabled_default=false
 persist.vendor.audio.spatializer.speaker_enabled=true
+vendor.audio.hapticgenerator.distortion.output.gain=0.38
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true

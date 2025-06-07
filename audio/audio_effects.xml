@@ -75,6 +75,7 @@
         <library name="volume_listener" path="libvolumelistener.so"/>
         <library name="audiosphere" path="libasphere.so"/>
         <library name="quasar" path="libquasar.so"/>
+        <library name="haptic_generator" path="libhapticgenerator.so"/>
         <library name="spatializer" path="libspatialaudio.so"/>
     </libraries>
     <effects>
@@ -124,6 +125,7 @@
         <effect name="notification_helper" library="volume_listener" uuid="0b776dde-0590-11e5-81ba-0025b32654a0"/>
         <effect name="audiosphere" library="audiosphere" uuid="184e62ab-2d19-4364-9d1b-c0a40733866c"/>
         <effect name="quasar" library="quasar" uuid="71d0e2ee-e44d-483d-a809-09e75ee55ecd"/>
+        <effect name="haptic_generator" library="haptic_generator" uuid="97c4acd1-8b82-4f2f-832e-c2fe5d7a9931"/>
         <effect name="spatializer" library="spatializer" uuid="cc4677de-ff72-11eb-9a03-0242ac130003"/>
     </effects>
     <postprocess>
