@@ -832,6 +832,32 @@ vendor/lib64/libqconfigclient.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
+# Media (Dolby)
+system_ext/lib64/vendor.dolby.hardware.dms@2.0.so;MODULE_SUFFIX=_system_ext
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-default-seccomp_policy
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_soft_dolby.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdlbpreg.so
+vendor/lib64/liboem_specific.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/mmid

@@ -265,6 +265,27 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libstagefright_softomx_plugin.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor
+
+$(call soong_config_set,media,needs_mutexlock_disabled_for_vtservice,true)
+
+# Media (Dolby)
+PRODUCT_PACKAGES += \
+    LineageDolby
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
+# DSP Volume Synchronizer
+PRODUCT_PACKAGES += \
+    LineageDSPVolumeSynchronizer
+
 # Memtrack
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
