@@ -1925,4 +1925,73 @@
     <ctl name="L DSP_RX5 Source" value="VDD_BATTMON" />
     <ctl name="R DSP_RX5 Source" value="VDD_BATTMON" />
 
+    <path name="audio-with-haptics-playback">
+    </path>
+
+    <path name="audio-record">
+    </path>
+
+    <path name="audio-record-voip">
+    </path>
+
+    <path name="audio-playback-voip">
+    </path>
+
+    <path name="compress-voip-call">
+    </path>
+
+    <path name="compress-offload-playback">
+    </path>
+
+    <path name="compress-offload-playback2">
+    </path>
+
+    <path name="compress-offload-playback3">
+    </path>
+
+    <path name="compress-offload-playback4">
+    </path>
+
+    <path name="compress-offload-playback5">
+    </path>
+
+    <path name="compress-offload-playback6">
+    </path>
+
+    <path name="compress-offload-playback7">
+    </path>
+
+    <path name="compress-offload-playback8">
+    </path>
+
+    <path name="compress-offload-playback9">
+    </path>
+
+    <path name="deep-buffer-playback">
+    </path>
+
+    <path name="incall_music_uplink">
+    </path>
+
+    <path name="incall_music_uplink2">
+    </path>
+
+    <path name="low-latency-playback">
+    </path>
+
+    <path name="audio-ull-playback">
+    </path>
+
+    <path name="mmap-playback">
+    </path>
+
+    <path name="mmap-record">
+    </path>
+
+    <path name="hifi-playback">
+    </path>
+
+    <path name="hifi-record">
+    </path>
+
 </mixer>
