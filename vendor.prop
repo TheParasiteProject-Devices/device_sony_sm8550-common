@@ -147,6 +147,7 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
 vendor.qcom.bluetooth.soc=hamilton
 vendor.hw.fm.init=0
+ro.vendor.fm.use_audio_session=true
 
 # Camera
 ro.camera.enableCamera1MaxZsl=1
