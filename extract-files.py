@@ -169,7 +169,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('sched_get_priority_max: 1'
     ),
     'system_ext/app/QesdkSysService/QesdkSysService.apk': blob_fixup()
-        .apktool_patch('blob-patches/QesdkSysService.patch', '-r'
+        .apktool_patch('blob-patches/QesdkSysService.patch'
     ),
 
 }  # fmt: skip
