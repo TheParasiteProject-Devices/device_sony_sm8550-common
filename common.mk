@@ -254,7 +254,7 @@ $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.sony
+    vendor.lineage.livedisplay-service.sony
 
 # Media
 PRODUCT_COPY_FILES += \
