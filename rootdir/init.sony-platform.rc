@@ -82,6 +82,7 @@ on post-fs-data
 on early-boot
     # Display
     chown system system /sys/devices/dsi_panel_driver/flm2_mode
+    chown system system /sys/devices/dsi_panel_driver/hbm_mode
     chown system system /sys/devices/dsi_panel_driver/camera_flash_brightness
     chown system system /sys/devices/dsi_panel_driver/thermal_limit
     chown system system /sys/devices/dsi_panel_driver/somc_max_luminance
