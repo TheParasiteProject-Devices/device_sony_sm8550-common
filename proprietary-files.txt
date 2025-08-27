@@ -1619,3 +1619,11 @@ vendor/lib64/c2.dolby.hevc.sec.dec.so|be8b156e6ba0ec97c7da04044ffabb5959e6a510
 vendor/lib64/c2.dolby.store.so|184bcadc12a2aee363d086490fdfb6c5271ac10e
 vendor/lib64/libdolbyottcameracontrol.so|8cd61fa1d09464710d570e66ee466567d6fb9060
 vendor/lib64/libdolbyvision.so|83c56a3c8c20d2ab04742f8ab82629a24a0e9774
+
+# Display (HDR) - from S911BXXS6CXI4
+vendor/lib64/libhdradaptivecustom.so|2875d8190a1806361b3c55c5ab44203007bd5145
+
+# Display (HDR) - from missi-user-15-AQ3A.240912.001-OS2.0.202.0.VNPMIXM-release-keys
+vendor/lib64/libhdrdynamicootf.so|432abb2677e2ed4a6c32524129bda568e878ad0e
+vendor/lib64/libhdrdynamic.so|f83d29e2227a641e0ecce8d5dc8d4745509d7b3d
+vendor/lib64/libhdrvivid.so|597215759f4319847397bfc858231f81aa138a62
