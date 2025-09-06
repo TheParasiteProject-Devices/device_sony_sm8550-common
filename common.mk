@@ -281,8 +281,8 @@ $(call soong_config_set,media,needs_mutexlock_disabled_for_vtservice,true)
 
 # Media (Dolby)
 PRODUCT_PACKAGES += \
-    LineageDolby \
-    SonyYodoLineageDolbyResCommon
+    ParanoidDolby \
+    SonyYodoParanoidDolbyResCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
