@@ -1,0 +1,16 @@
+################################################################################
+#
+# Copyright 2021 Sony Corporation
+#
+# init.sony.usb.rc
+#
+
+################################################################################
+# SOMC USB Eng Mode
+#  To pass eng mode to UsbGadgetHal , set vendor.usb.config as "somc_eng_mode".
+
+on property:persist.usb.eng=1 && property:vendor.usb.config=adb && property:sys.usb.configfs=2
+    setprop vendor.usb.config somc_eng_mode,adb
+
+on property:persist.usb.eng=0 && property:vendor.usb.config=somc_eng_mode,adb && property:sys.usb.configfs=2
+    setprop vendor.usb.config adb
