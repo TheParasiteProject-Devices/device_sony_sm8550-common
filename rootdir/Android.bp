@@ -24,6 +24,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.sony.usb.rc",
+    src: "init.sony.usb.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
     name: "init.sony-platform.rc",
     src: "init.sony-platform.rc",
     sub_dir: "init",
