@@ -6,6 +6,7 @@ ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 af.resampler.quality=7
 ro.audio.usb.period_us=20375
+ro.audio.resampler.psd.enable_at_samplerate=44100
 ro.audio.resampler.psd.stopband=132
 ro.audio.resampler.psd.halflength=960
 ro.audio.resampler.psd.cutoff_percent=98
