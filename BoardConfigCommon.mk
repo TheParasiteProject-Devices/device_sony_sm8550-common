@@ -16,6 +16,7 @@
 
 # Mainline
 include build/make/target/board/BoardConfigMainlineCommon.mk
+include build/make/target/board/BoardConfigPixelCommon.mk
 TARGET_USERIMAGES_USE_EXT4 := false
 TARGET_NO_RECOVERY := false
 TARGET_LMKD_STATS_LOG := false
