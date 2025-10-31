@@ -1038,6 +1038,8 @@ system_ext/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
 vendor/bin/qesdk-manager
 vendor/etc/init/qesdk-manager.rc
 vendor/etc/seccomp_policy/qesdk.policy
+vendor/lib/libqesdk2_0.so;MAKE_COPY_RULE_ONLY
+vendor/lib/libqesdk_manager.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/libqti-qesdk-secure.so
