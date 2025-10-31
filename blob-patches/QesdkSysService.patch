@@ -1,0 +1,14 @@
+--- a/smali/vendor/qti/qesdk/sysservice/QesdkSysReceiver.smali
++++ b/smali/vendor/qti/qesdk/sysservice/QesdkSysReceiver.smali
+@@ -206,7 +206,9 @@
+ 
+     move-result-object p2
+ 
+-    invoke-virtual {p1, p2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
++    sget-object v0, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
++
++    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
+ 
+     move-result-object p1
+
+--
