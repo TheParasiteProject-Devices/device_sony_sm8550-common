@@ -278,7 +278,7 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libcodec2_soft_common.vendor
 
-$(call soong_config_set,media,needs_mutexlock_disabled_for_vtservice,true)
+$(call soong_config_set_bool,media,needs_mutexlock_disabled_for_vtservice,true)
 
 # Media (Dolby)
 PRODUCT_PACKAGES += \
