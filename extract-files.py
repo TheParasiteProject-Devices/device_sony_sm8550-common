@@ -135,6 +135,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libvideooptfeature.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
+        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
